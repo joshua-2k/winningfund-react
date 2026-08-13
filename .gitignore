@@ -15,3 +15,5 @@ Thumbs.db
 
 # Local patch snapshots
 patch-backup/
+!.env.sample
+!.env.template
