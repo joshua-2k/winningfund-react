@@ -1,0 +1,70 @@
+/*
+ * WinningFund visual simplification patch
+ * - Use the supplied Seoul city photograph as the HOME hero background.
+ * - Remove all SVG/continuous wave visuals across routes.
+ * - Recover the vertical space that was reserved for wave geometry.
+ */
+
+/* HOME hero photo */
+.wf-home-hero--waves-reference {
+  background-color: #071126 !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 12, 30, 0.72) 0%,
+      rgba(3, 12, 30, 0.48) 52%,
+      rgba(3, 12, 30, 0.62) 100%
+    ),
+    url('../assets/home/home-hero-city.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.wf-home-hero--waves-reference::before {
+  background: none !important;
+}
+
+/* Remove every wave layer from HOME and route transitions. */
+.wf-home-wave,
+.wf-home-wave--hero-to-light,
+.wf-home-wave--light-to-dark,
+.wf-home-wave--dark-to-light,
+.wf-route-hero-wave,
+.wf-desktop-continuous-wave,
+.wf-about-wave,
+.wf-members-wave,
+.wf-activities-wave,
+.wf-recruitment-wave {
+  display: none !important;
+}
+
+/* The HOME hero previously reserved space for its bottom wave. */
+.wf-home-hero__kinetic-main {
+  padding-bottom: clamp(38px, 5vh, 64px) !important;
+}
+
+/* Route heroes previously reserved a large bottom area for wave geometry. */
+.wf-about-hero__inner,
+.wf-members-hero__inner,
+.wf-activities-hero__inner,
+.wf-recruitment-hero__inner {
+  padding-bottom: clamp(56px, 7vh, 92px) !important;
+}
+
+@media (max-width: 63.99rem) {
+  .wf-home-hero--waves-reference {
+    background-position: 54% center !important;
+  }
+
+  .wf-home-hero__kinetic-main {
+    padding-bottom: clamp(30px, 5vh, 48px) !important;
+  }
+
+  .wf-about-hero__inner,
+  .wf-members-hero__inner,
+  .wf-activities-hero__inner,
+  .wf-recruitment-hero__inner {
+    padding-bottom: 56px !important;
+  }
+}

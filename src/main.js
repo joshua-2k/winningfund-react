@@ -17,6 +17,7 @@ import './styles/recruitment.css'
 import './styles/route-hero-effects.css'
 import './styles/kinetic-title-safety.css'
 import './styles/placeholders.css'
+import './styles/wave-removal.css'
 
 const rootElement = document.getElementById('root')
 
