@@ -1,0 +1,81 @@
+/* ============================================================
+   WinningFund Recruitment Photo Background Patch
+   Uses the approved Visionet finance/office image
+   ============================================================ */
+
+.wf-recruitment-hero {
+  position: relative !important;
+  color: #ffffff !important;
+  background-color: #071126 !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 28, 0.76) 0%,
+      rgba(5, 12, 28, 0.56) 34%,
+      rgba(5, 12, 28, 0.42) 62%,
+      rgba(5, 12, 28, 0.60) 100%
+    ),
+    url('../assets/pages/recruitment-hero-photo.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  isolation: isolate !important;
+}
+
+.wf-recruitment-hero::before {
+  display: none !important;
+  content: none !important;
+}
+
+.wf-recruitment-hero__topline,
+.wf-recruitment-hero__bottom,
+.wf-recruitment-status {
+  position: relative;
+  z-index: 2;
+}
+
+.wf-recruitment-hero__topline {
+  color: rgba(255,255,255,0.78) !important;
+  border-bottom-color: rgba(255,255,255,0.28) !important;
+}
+
+.wf-recruitment-hero__term,
+.wf-recruitment-hero__title,
+.wf-recruitment-hero__period,
+.wf-recruitment-status strong {
+  color: #ffffff !important;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.24);
+}
+
+.wf-recruitment-hero__period-rule {
+  background: rgba(255,255,255,0.42) !important;
+}
+
+.wf-recruitment-status {
+  border-top-color: rgba(255,255,255,0.28) !important;
+}
+
+.wf-recruitment-status__dot {
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.10) !important;
+}
+
+.wf-route-hero-wave,
+.wf-route-hero-wave--white,
+.wf-route-hero-wave--soft,
+.wf-recruitment-wave {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.wf-recruitment-hero__inner {
+  padding-bottom: clamp(48px, 6vh, 80px) !important;
+}
+
+@media (max-width: 63.99rem) {
+  .wf-recruitment-hero {
+    background-position: 58% center !important;
+  }
+}

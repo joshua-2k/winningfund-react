@@ -21,6 +21,8 @@ import './styles/wave-removal.css'
 
 import './styles/route-photo-backgrounds.css'
 
+import './styles/recruitment-photo-background.css'
+
 const rootElement = document.getElementById('root')
 
 if (!rootElement) {
@@ -40,4 +42,5 @@ createRoot(rootElement).render(
     ),
   ),
 )
+
 
