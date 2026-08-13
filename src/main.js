@@ -19,6 +19,8 @@ import './styles/kinetic-title-safety.css'
 import './styles/placeholders.css'
 import './styles/wave-removal.css'
 
+import './styles/route-photo-backgrounds.css'
+
 const rootElement = document.getElementById('root')
 
 if (!rootElement) {
@@ -38,3 +40,4 @@ createRoot(rootElement).render(
     ),
   ),
 )
+

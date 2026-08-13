@@ -1,0 +1,135 @@
+/* ============================================================
+   WinningFund Route Photo Backgrounds Patch
+   Imported last from src/main.js
+   ============================================================ */
+
+/* HOME: keep city photo from previous patch and remove extra line accents */
+.wf-home-hero.wf-home-hero--waves-reference {
+  background-position: center center !important;
+}
+
+.wf-home-kinetic-footer__divider,
+.wf-home-kinetic-row__annotation {
+  display: none !important;
+}
+
+.wf-home-kinetic-footer {
+  grid-template-columns: minmax(160px, auto) minmax(0, auto) !important;
+  gap: clamp(20px, 3.5vw, 48px) !important;
+}
+
+/* ABOUT / MEMBERS / ACTIVITIES — use supplied photos instead of blue gradients */
+.wf-about-hero,
+.wf-members-hero,
+.wf-activities-hero {
+  position: relative !important;
+  color: #ffffff !important;
+  background-color: #071126 !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  isolation: isolate !important;
+}
+
+.wf-about-hero::before,
+.wf-members-hero::before,
+.wf-activities-hero::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Separate photo for each page */
+.wf-about-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 28, 0.72) 0%,
+      rgba(5, 12, 28, 0.50) 34%,
+      rgba(5, 12, 28, 0.38) 60%,
+      rgba(5, 12, 28, 0.58) 100%
+    ),
+    url('../assets/pages/about-hero-photo.jpg') !important;
+}
+
+.wf-members-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 28, 0.74) 0%,
+      rgba(5, 12, 28, 0.54) 35%,
+      rgba(5, 12, 28, 0.40) 62%,
+      rgba(5, 12, 28, 0.60) 100%
+    ),
+    url('../assets/pages/members-hero-photo.jpg') !important;
+}
+
+.wf-activities-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 28, 0.76) 0%,
+      rgba(5, 12, 28, 0.55) 34%,
+      rgba(5, 12, 28, 0.42) 62%,
+      rgba(5, 12, 28, 0.60) 100%
+    ),
+    url('../assets/pages/activities-hero-photo.jpg') !important;
+}
+
+/* Readability */
+.wf-about-hero__eyebrow,
+.wf-members-hero__eyebrow,
+.wf-activities-hero__eyebrow {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+.wf-about-hero__summary,
+.wf-members-hero__copy,
+.wf-activities-hero__copy {
+  color: rgba(255,255,255,0.90) !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.22);
+}
+
+.wf-about-hero__title,
+.wf-members-hero__title,
+.wf-activities-hero__title {
+  text-shadow: 0 6px 28px rgba(0,0,0,0.26);
+}
+
+.wf-about-hero__facts {
+  border-top-color: rgba(255,255,255,0.30) !important;
+}
+
+/* Wave layers already removed by previous patch, but keep safe overrides */
+.wf-route-hero-wave,
+.wf-route-hero-wave--white,
+.wf-route-hero-wave--soft,
+.wf-about-wave,
+.wf-members-wave,
+.wf-activities-wave {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.wf-about-hero__inner,
+.wf-members-hero__inner,
+.wf-activities-hero__inner {
+  padding-bottom: clamp(48px, 6vh, 80px) !important;
+}
+
+/* Mobile crop tuning */
+@media (max-width: 63.99rem) {
+  .wf-about-hero {
+    background-position: 56% center !important;
+  }
+
+  .wf-members-hero {
+    background-position: 52% center !important;
+  }
+
+  .wf-activities-hero {
+    background-position: 58% center !important;
+  }
+}
