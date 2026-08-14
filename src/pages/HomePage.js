@@ -997,15 +997,6 @@ function SemesterContents() {
             semester.title,
           ),
         ),
-
-        createElement(
-          'div',
-          {
-            className: 'wf-home-semester__term',
-            'aria-hidden': 'true',
-          },
-          '18—2',
-        ),
       ),
 
       hasSchedule
