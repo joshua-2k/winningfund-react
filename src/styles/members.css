@@ -373,3 +373,90 @@
   .wf-members .wf-member-card__media-fallback { width:min(196px,58vw) !important; max-width:none !important; }
 }
 /* WF MEMBERS SOURCE PORTRAIT CIRCLE FINAL END */
+
+
+/* WF MEMBERS CLEANUP V3 START */
+.wf-members-section--current,
+.wf-members-section--history {
+  background:#fff !important;
+}
+
+.wf-members-current__heading {
+  display:flex !important;
+  align-items:center !important;
+  margin-bottom:clamp(46px,5vw,70px) !important;
+}
+
+.wf-members-current__meta {
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  gap:14px !important;
+  color:#0a1730 !important;
+}
+
+.wf-members-current__meta strong {
+  color:#0a1730 !important;
+  font-size:clamp(2.2rem,3vw,3.15rem) !important;
+  font-weight:840 !important;
+  line-height:1 !important;
+  letter-spacing:-.055em !important;
+}
+
+.wf-members-current__badge {
+  display:inline-flex !important;
+  align-items:center !important;
+  min-height:28px;
+  padding:5px 10px;
+  border:1px solid rgba(30,78,151,.26);
+  border-radius:999px;
+  color:var(--wf-brand-blue) !important;
+  font-size:.6rem !important;
+  font-weight:850 !important;
+  line-height:1 !important;
+  letter-spacing:.12em !important;
+  white-space:nowrap;
+}
+
+.wf-members-history__heading {
+  display:block !important;
+  margin-bottom:clamp(46px,5vw,70px) !important;
+}
+
+.wf-members .wf-member-grid--members-current {
+  grid-auto-rows:1fr !important;
+  align-items:stretch !important;
+}
+
+.wf-members .wf-member-grid--members-current .wf-member-card {
+  height:100% !important;
+  display:grid !important;
+  grid-template-rows:auto 1fr !important;
+  align-content:start !important;
+}
+
+.wf-members .wf-member-grid--members-current .wf-responsive-media,
+.wf-members .wf-member-grid--members-current .wf-member-card__media-fallback {
+  width:clamp(168px,16vw,214px) !important;
+  aspect-ratio:1 !important;
+  margin-inline:auto !important;
+}
+
+.wf-members .wf-member-grid--members-current .wf-member-card__body {
+  width:min(100%,230px) !important;
+  min-height:76px !important;
+  margin-inline:auto !important;
+  align-content:start !important;
+}
+
+@media (max-width:40rem) {
+  .wf-members-current__meta {
+    gap:10px !important;
+    flex-wrap:wrap !important;
+  }
+
+  .wf-members-current__meta strong {
+    font-size:2.25rem !important;
+  }
+}
+/* WF MEMBERS CLEANUP V3 END */

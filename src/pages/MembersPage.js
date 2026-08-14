@@ -14,13 +14,7 @@ const membersData =
 
 function HistoricalMembers({ term }) {
   if (term.dataStatus !== 'AVAILABLE') {
-    return createElement(
-      'p',
-      {
-        className: 'wf-members-history__unavailable',
-      },
-      '현재 보유 데이터에 명단이 없습니다.',
-    )
+    return null
   }
 
   return createElement(
@@ -39,7 +33,6 @@ function HistoricalMembers({ term }) {
     ),
   )
 }
-
 export default function MembersPage() {
   const terms = [...membersData.terms].sort(
     (a, b) => a.order - b.order,
@@ -52,7 +45,9 @@ export default function MembersPage() {
     ) ?? terms[0]
 
   const historical = terms.filter(
-    (term) => term.termId !== current?.termId,
+    (term) =>
+      term.termId !== current?.termId &&
+      term.dataStatus === 'AVAILABLE',
   )
 
   return createElement(
@@ -111,8 +106,7 @@ export default function MembersPage() {
           {
             className:
               'wf-members-section wf-members-section--current',
-            'aria-labelledby':
-              'wf-members-current-title',
+            'aria-label': `${current.label}기 current team`,
           },
 
           createElement(
@@ -127,7 +121,6 @@ export default function MembersPage() {
                 className:
                   'wf-members-current__heading',
               },
-
               createElement(
                 'div',
                 {
@@ -135,26 +128,20 @@ export default function MembersPage() {
                     'wf-members-current__meta',
                 },
                 createElement(
-                  'span',
-                  null,
-                  '01 / CURRENT TERM',
-                ),
-                createElement(
                   'strong',
                   null,
                   `${current.label}기`,
                 ),
-              ),
-
-              createElement(
-                'h2',
-                {
-                  id: 'wf-members-current-title',
-                },
-                '현재 위닝펀드를 이끄는 사람들',
+                createElement(
+                  'span',
+                  {
+                    className:
+                      'wf-members-current__badge',
+                  },
+                  'CURRENT TEAM',
+                ),
               ),
             ),
-
             createElement(MemberGrid, {
               members: current.members,
               generationContext: current.termId,
@@ -189,19 +176,6 @@ export default function MembersPage() {
           {
             className: 'wf-members-history__heading',
           },
-
-          createElement(
-            'div',
-            {
-              className: 'wf-members-history__meta',
-            },
-            createElement(
-              'span',
-              null,
-              '02 / MEMBERS & ALUMNI',
-            ),
-          ),
-
           createElement(
             'h2',
             {
@@ -209,14 +183,7 @@ export default function MembersPage() {
             },
             '기수별 멤버',
           ),
-
-          createElement(
-            'p',
-            null,
-            '여러 기수를 동시에 펼쳐 비교할 수 있습니다. 보유 명단은 9기부터 제공하며, 그 이전 기수는 기록만 유지합니다.',
-          ),
         ),
-
         createElement(Accordion, {
           items: historical,
           itemIdResolver: (term) => term.termId,
@@ -238,9 +205,7 @@ export default function MembersPage() {
               createElement(
                 'span',
                 null,
-                term.dataStatus === 'AVAILABLE'
-                  ? `${term.members.length}명`
-                  : '명단 미보유',
+                `${term.members.length}명`,
               ),
             ),
           panelContentResolver: (term) =>
