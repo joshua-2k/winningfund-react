@@ -1,6 +1,5 @@
 ﻿import {
   createElement,
-  useEffect,
   useState,
 } from 'react'
 import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
@@ -215,6 +214,8 @@ function MockProgram({ activity }) {
 }
 
 function ReportsProgram({ activity }) {
+  const teamReportBoardUrl =
+    'https://cafe.naver.com/f-e/cafes/26340278/menus/499?viewType=L'
   const personalMedia = {
     'individual-strategy': ['activity-individual-strategy-report-photo', '투자전략 리포트 예시'],
     'individual-company': ['activity-individual-company-report-photo', '기업분석 리포트 예시'],
@@ -234,6 +235,28 @@ function ReportsProgram({ activity }) {
         caption: 'TEAM REPORT',
         className: 'wf-activities-reports__team-media',
       }),
+      createElement(
+        'a',
+        {
+          className:
+            'wf-activities-reports__board-link',
+          href: teamReportBoardUrl,
+          target: '_blank',
+          rel: 'noreferrer',
+        },
+        createElement(
+          'span',
+          null,
+          '팀리포트 게시판 보기',
+        ),
+        createElement(
+          'span',
+          {
+            'aria-hidden': 'true',
+          },
+          '↗',
+        ),
+      ),
       createElement('ul', null,
         ...(activity.teamReport?.points ?? []).map((point) => createElement('li', { key: point }, point)),
       ),
@@ -516,48 +539,46 @@ export default function ActivitiesPage() {
   const [activeSectionId, setActiveSectionId] =
     useState(programs[0]?.activityId)
 
-  useEffect(() => {
-    const elements = [
-      ...document.querySelectorAll(
-        '[data-activities-section]',
-      ),
-    ]
+  const activeProgram = programs.find(
+    (activity) =>
+      activity.activityId ===
+      activeSectionId,
+  )
 
-    if (elements.length === 0) return undefined
+  let activeContent = null
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio -
-              a.intersectionRatio,
-          )
-
-        if (visible[0]?.target?.id) {
-          setActiveSectionId(
-            visible[0].target.id,
-          )
-        }
-      },
+  if (activeProgram) {
+    activeContent = createElement(
+      ProgramSection,
       {
-        rootMargin: '-24% 0px -58% 0px',
-        threshold: [
-          0,
-          0.1,
-          0.25,
-          0.5,
-        ],
+        key: activeProgram.activityId,
+        activity: activeProgram,
       },
     )
-
-    elements.forEach((element) =>
-      observer.observe(element),
+  } else if (
+    activeSectionId === 'other-academic'
+  ) {
+    activeContent = createElement(
+      OtherAcademic,
+      {
+        items: otherAcademicActivities,
+      },
     )
-
-    return () => observer.disconnect()
-  }, [])
+  } else if (
+    activeSectionId === 'small-groups'
+  ) {
+    activeContent = createElement(
+      SmallGroups,
+      {
+        clubs,
+        title:
+          activitiesPage?.clubsTitle ??
+          '소모임',
+        introduction:
+          activitiesPage?.clubsIntroduction,
+      },
+    )
+  }
 
   return createElement(
     'main',
@@ -566,25 +587,26 @@ export default function ActivitiesPage() {
     },
 
     createElement(RouteHeroMagneticScroll, {
-      heroSelector: '.wf-activities-hero',
-      nextSelector: '.wf-activities-intro',
+      heroSelector:
+        '.wf-activities-hero',
+      nextSelector:
+        '.wf-activities-intro',
     }),
 
     createElement(
       'section',
       {
-        className: 'wf-activities-hero',
+        className:
+          'wf-activities-hero',
         'aria-labelledby':
           'wf-activities-title',
       },
-
       createElement(
         'div',
         {
           className:
             'wf-activities-hero__inner',
         },
-
         createElement(
           'p',
           {
@@ -593,13 +615,12 @@ export default function ActivitiesPage() {
           },
           'WINNINGFUND',
         ),
-
         createElement(RouteHeroTitle, {
           id: 'wf-activities-title',
-          className: 'wf-activities-hero__title',
+          className:
+            'wf-activities-hero__title',
           title: 'ACTIVITIES',
         }),
-
         createElement(
           'p',
           {
@@ -609,8 +630,11 @@ export default function ActivitiesPage() {
           activitiesPage?.heroSummary,
         ),
       ),
-
-      createElement(RouteHeroWave, { waveId: 'wf-activities-route-wave', surface: 'white' }),
+      createElement(RouteHeroWave, {
+        waveId:
+          'wf-activities-route-wave',
+        surface: 'white',
+      }),
     ),
 
     createElement(
@@ -619,14 +643,12 @@ export default function ActivitiesPage() {
         className:
           'wf-activities-intro',
       },
-
       createElement(
         'div',
         {
           className:
             'wf-activities-section__inner',
         },
-
         createElement(
           'div',
           {
@@ -635,21 +657,20 @@ export default function ActivitiesPage() {
           },
           'ACTIVITY SYSTEM',
         ),
-
         createElement(
           'h2',
           null,
           activitiesPage?.introHeadline,
         ),
-
         createElement(
           'div',
           {
             className:
               'wf-activities-intro__copy',
           },
-          ...(activitiesPage?.introParagraphs ??
-            []).map((paragraph) =>
+          ...(activitiesPage
+            ?.introParagraphs ?? []
+          ).map((paragraph) =>
             createElement(
               'p',
               {
@@ -666,33 +687,29 @@ export default function ActivitiesPage() {
       'div',
       {
         className:
-          'wf-activities-internal-nav',
+          'wf-activities-internal-nav wf-activities-tabs',
       },
       createElement(InternalSectionNav, {
         items: navItems,
         activeSectionId,
         ariaLabel: '활동 페이지 목차',
+        mode: 'tabs',
+        onSelect: setActiveSectionId,
       }),
     ),
 
-    ...programs.map((activity) =>
-      createElement(ProgramSection, {
-        key: activity.activityId,
-        activity,
-      }),
+    createElement(
+      'div',
+      {
+        id:
+          `wf-activities-panel-${activeSectionId}`,
+        className:
+          'wf-activities-tab-stage',
+        role: 'tabpanel',
+        'aria-labelledby':
+          `wf-activities-tab-${activeSectionId}`,
+      },
+      activeContent,
     ),
-
-    createElement(OtherAcademic, {
-      items: otherAcademicActivities,
-    }),
-
-    createElement(SmallGroups, {
-      clubs,
-      title:
-        activitiesPage?.clubsTitle ??
-        '소모임',
-      introduction:
-        activitiesPage?.clubsIntroduction,
-    }),
   )
 }

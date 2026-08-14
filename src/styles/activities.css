@@ -1040,3 +1040,100 @@
   .wf-activities-media .wf-responsive-media__image { transition:none !important; }
 }
 /* WF ACTIVITIES SOURCE MEDIA FINAL END */
+
+
+/* WF ACTIVITIES TABS REPORTS V3 START */
+.wf-activities-tabs
+  .wf-internal-section-nav__link {
+  appearance:none;
+  -webkit-appearance:none;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  outline:0;
+  background:transparent;
+  font:inherit;
+  cursor:pointer;
+}
+
+.wf-activities-tabs
+  .wf-internal-section-nav__link:hover {
+  color:#0a1730;
+}
+
+.wf-activities-tabs
+  .wf-internal-section-nav__link:focus-visible {
+  outline:2px solid var(--wf-brand-blue);
+  outline-offset:5px;
+}
+
+.wf-activities-tab-stage {
+  min-height:clamp(660px,72vh,980px);
+  background:#fff;
+  animation:
+    wf-activities-tab-enter
+    220ms var(--wf-ease-out) both;
+}
+
+.wf-activities-tab-stage
+  > .wf-activities-program,
+.wf-activities-tab-stage
+  > .wf-activities-chapter {
+  min-height:inherit;
+}
+
+@keyframes wf-activities-tab-enter {
+  from {
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.wf-activities-reports__board-link {
+  width:fit-content;
+  margin:22px 0 26px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 15px;
+  border:1px solid rgba(30,78,151,.24);
+  border-radius:999px;
+  color:var(--wf-brand-blue);
+  background:#fff;
+  font-size:.72rem;
+  font-weight:830;
+  line-height:1;
+  letter-spacing:-.01em;
+  text-decoration:none;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.wf-activities-reports__board-link:hover {
+  border-color:rgba(30,78,151,.55);
+  background:rgba(30,78,151,.045);
+  transform:translateY(-1px);
+}
+
+.wf-activities-reports__board-link
+  > span:last-child {
+  font-size:.86rem;
+}
+
+@media (max-width:40rem) {
+  .wf-activities-tab-stage {
+    min-height:620px;
+  }
+
+  .wf-activities-reports__board-link {
+    margin-top:18px;
+  }
+}
+/* WF ACTIVITIES TABS REPORTS V3 END */
