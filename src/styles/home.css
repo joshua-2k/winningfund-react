@@ -14206,3 +14206,24 @@
   }
 }
 /* WF OUR MISSION LARGE TITLE FIX 2026-08 END */
+
+
+/* WF HOME PROGRAM HEADLINE LINEBREAK LOCK 2026-08 START */
+.wf-home-programs__headline {
+  max-width: none !important;
+}
+
+.wf-home-programs__headline-line > span {
+  white-space: nowrap !important;
+}
+
+@media (max-width: 48rem) {
+  .wf-home-programs__headline {
+    max-width: none !important;
+  }
+
+  .wf-home-programs__headline-line > span {
+    white-space: nowrap !important;
+  }
+}
+/* WF HOME PROGRAM HEADLINE LINEBREAK LOCK 2026-08 END */
