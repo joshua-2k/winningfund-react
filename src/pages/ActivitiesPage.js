@@ -509,6 +509,70 @@ function SmallGroups({
   )
 }
 
+function ActivitiesIntroHeadline({ headline = '' }) {
+  const accentText = '스스로 판단하는'
+  const accentIndex = headline.indexOf(accentText)
+
+  if (accentIndex < 0) {
+    return createElement(
+      'h2',
+      {
+        className:
+          'wf-activities-intro__headline',
+      },
+      headline,
+    )
+  }
+
+  const beforeAccent =
+    headline.slice(0, accentIndex).trim()
+
+  const afterAccent =
+    headline
+      .slice(accentIndex + accentText.length)
+      .trim()
+
+  return createElement(
+    'h2',
+    {
+      className:
+        'wf-activities-intro__headline',
+      'aria-label': headline,
+    },
+
+    beforeAccent
+      ? createElement(
+          'span',
+          {
+            className:
+              'wf-activities-intro__headline-line',
+          },
+          beforeAccent,
+        )
+      : null,
+
+    createElement(
+      'span',
+      {
+        className:
+          'wf-activities-intro__headline-line wf-activities-intro__headline-line--accent',
+      },
+      accentText,
+    ),
+
+    afterAccent
+      ? createElement(
+          'span',
+          {
+            className:
+              'wf-activities-intro__headline-line',
+          },
+          afterAccent,
+        )
+      : null,
+  )
+}
+
 export default function ActivitiesPage() {
   const {
     activitiesPage,
@@ -657,11 +721,10 @@ export default function ActivitiesPage() {
           },
           'ACTIVITY SYSTEM',
         ),
-        createElement(
-          'h2',
-          null,
-          activitiesPage?.introHeadline,
-        ),
+        createElement(ActivitiesIntroHeadline, {
+          headline:
+            activitiesPage?.introHeadline,
+        }),
         createElement(
           'div',
           {
