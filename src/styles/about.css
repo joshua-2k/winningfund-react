@@ -489,7 +489,7 @@
   min-height: 172px;
   padding: 28px 30px;
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) auto;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
   grid-template-rows: auto auto;
   column-gap: 18px;
   align-content: center;
@@ -514,9 +514,42 @@
   font-weight: 850;
 }
 
+.wf-about-social__brand {
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wf-about-social__brand-svg {
+  display: block;
+  width: 42px;
+  height: 42px;
+}
+
+.wf-about-social__brand-svg--instagram,
+.wf-about-social__brand-svg--naver-cafe {
+  filter: drop-shadow(0 5px 12px rgba(10, 23, 48, 0.08));
+}
+
+.wf-about-social__brand-fallback {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #0a1730;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .wf-about-social__label {
   color: #0a1730;
-  font-size: clamp(1.6rem, 2.35vw, 2.5rem);
+  font-size: clamp(1.3rem, 1.85vw, 1.95rem);
   font-weight: 820;
   line-height: 1;
   letter-spacing: -0.05em;

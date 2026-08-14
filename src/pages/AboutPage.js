@@ -131,14 +131,6 @@ function OrganizationChart({ record }) {
             className: 'wf-about-org__officer',
           },
           createElement(
-            'span',
-            {
-              className: 'wf-about-org__officer-number',
-              'aria-hidden': 'true',
-            },
-            String(node.order - 2).padStart(2, '0'),
-          ),
-          createElement(
             'h3',
             null,
             node.role,
@@ -204,6 +196,133 @@ function ExternalActivityList({ record }) {
   )
 }
 
+function SocialBrandIcon({ id }) {
+  if (id === 'instagram') {
+    return createElement(
+      'svg',
+      {
+        className:
+          'wf-about-social__brand-svg wf-about-social__brand-svg--instagram',
+        viewBox: '0 0 48 48',
+        focusable: 'false',
+        'aria-hidden': 'true',
+      },
+      createElement(
+        'defs',
+        null,
+        createElement(
+          'linearGradient',
+          {
+            id: 'wf-instagram-gradient',
+            x1: '0%',
+            y1: '100%',
+            x2: '100%',
+            y2: '0%',
+          },
+          createElement('stop', {
+            offset: '0%',
+            stopColor: '#feda75',
+          }),
+          createElement('stop', {
+            offset: '28%',
+            stopColor: '#fa7e1e',
+          }),
+          createElement('stop', {
+            offset: '55%',
+            stopColor: '#d62976',
+          }),
+          createElement('stop', {
+            offset: '78%',
+            stopColor: '#962fbf',
+          }),
+          createElement('stop', {
+            offset: '100%',
+            stopColor: '#4f5bd5',
+          }),
+        ),
+      ),
+      createElement('rect', {
+        x: 3,
+        y: 3,
+        width: 42,
+        height: 42,
+        rx: 12,
+        fill: 'url(#wf-instagram-gradient)',
+      }),
+      createElement('rect', {
+        x: 13,
+        y: 13,
+        width: 22,
+        height: 22,
+        rx: 7,
+        fill: 'none',
+        stroke: '#ffffff',
+        strokeWidth: 3,
+      }),
+      createElement('circle', {
+        cx: 24,
+        cy: 24,
+        r: 5.5,
+        fill: 'none',
+        stroke: '#ffffff',
+        strokeWidth: 3,
+      }),
+      createElement('circle', {
+        cx: 32.5,
+        cy: 15.5,
+        r: 1.9,
+        fill: '#ffffff',
+      }),
+    )
+  }
+
+  if (id === 'naver-cafe') {
+    return createElement(
+      'svg',
+      {
+        className:
+          'wf-about-social__brand-svg wf-about-social__brand-svg--naver-cafe',
+        viewBox: '0 0 48 48',
+        focusable: 'false',
+        'aria-hidden': 'true',
+      },
+      createElement('rect', {
+        x: 3,
+        y: 3,
+        width: 42,
+        height: 42,
+        rx: 12,
+        fill: '#ffffff',
+        stroke: 'rgba(10, 23, 48, 0.08)',
+      }),
+      createElement('path', {
+        d: 'M11.5 18.5h22v8.3c0 7.2-4.9 12.2-11 12.2s-11-5-11-12.2z',
+        fill: '#03c75a',
+      }),
+      createElement('path', {
+        d: 'M33.5 21h2.2a5.2 5.2 0 0 1 0 10.4h-3.1',
+        fill: 'none',
+        stroke: '#03c75a',
+        strokeWidth: 3.2,
+        strokeLinecap: 'round',
+      }),
+      createElement('path', {
+        d: 'M26.7 16.2c.2-4.8 4-7.7 9-7.8-.1 4.8-3.7 7.6-9 7.8z',
+        fill: '#03c75a',
+      }),
+    )
+  }
+
+  return createElement(
+    'span',
+    {
+      className: 'wf-about-social__brand-fallback',
+      'aria-hidden': 'true',
+    },
+    'W',
+  )
+}
+
 function SocialLinks({ record }) {
   return createElement(
     'div',
@@ -223,10 +342,12 @@ function SocialLinks({ record }) {
         createElement(
           'span',
           {
-            className: 'wf-about-social__number',
+            className: 'wf-about-social__brand',
             'aria-hidden': 'true',
           },
-          String(index + 1).padStart(2, '0'),
+          createElement(SocialBrandIcon, {
+            id: item.id,
+          }),
         ),
         createElement(
           'span',
