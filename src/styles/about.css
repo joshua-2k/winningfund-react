@@ -712,3 +712,19 @@
     transition: none !important;
   }
 }
+
+/* WF ABOUT EXTERNAL TITLE ONE LINE 2026-08 START */
+.wf-about-section--external
+  .wf-about-section-head__title {
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 40rem) {
+  .wf-about-section--external
+    .wf-about-section-head__title {
+    font-size:
+      clamp(2rem, 9.2vw, 3.4rem) !important;
+  }
+}
+/* WF ABOUT EXTERNAL TITLE ONE LINE 2026-08 END */

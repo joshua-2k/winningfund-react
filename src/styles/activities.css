@@ -1186,3 +1186,74 @@
   }
 }
 /* WF ACTIVITIES INTRO EMPHASIS V3 2026-08 END */
+
+
+/* WF ACTIVITIES CONSOLIDATED TYPOGRAPHY 2026-08 START */
+
+/* Intro — 3 intentional desktop lines */
+.wf-activities-intro .wf-activities-section__inner {
+  grid-template-columns:
+    minmax(110px, 0.16fr)
+    minmax(0, 1fr) !important;
+  column-gap:
+    clamp(30px, 4vw, 58px) !important;
+}
+
+.wf-activities-intro__headline {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  color: #0a1730;
+  font-size:
+    clamp(2.8rem, 3.8vw, 3.95rem) !important;
+  font-weight: 840 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.055em !important;
+  word-break: keep-all;
+}
+
+.wf-activities-intro__headline-line {
+  display: block;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.wf-activities-intro__headline-line--accent {
+  color: var(--wf-brand-blue) !important;
+}
+
+/* Program 02 heading — exactly two lines */
+.wf-activities-program__title-line {
+  display: block;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.wf-activities-program__title--classes {
+  max-width: none !important;
+}
+
+/* FM secondary label */
+.wf-activities-fm__sub-label {
+  display: inline-block;
+}
+
+@media (max-width: 48rem) {
+  .wf-activities-intro .wf-activities-section__inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .wf-activities-intro__headline {
+    font-size:
+      clamp(2.35rem, 9.5vw, 3.4rem) !important;
+  }
+
+  .wf-activities-intro__headline-line {
+    white-space: normal;
+  }
+
+  .wf-activities-program__title-line {
+    white-space: normal;
+  }
+}
+/* WF ACTIVITIES CONSOLIDATED TYPOGRAPHY 2026-08 END */

@@ -49,6 +49,9 @@ function ActivityMedia({
 
 
 function ProgramHeading({ activity }) {
+  const isClasses =
+    activity.activityId === 'classes'
+
   return createElement(
     'header',
     {
@@ -65,8 +68,37 @@ function ProgramHeading({ activity }) {
 
     createElement(
       'h2',
-      null,
-      activity.pageTitle ?? activity.title,
+      isClasses
+        ? {
+            className:
+              'wf-activities-program__title wf-activities-program__title--classes',
+            'aria-label':
+              '분반강의 (입문반 · 실전반)',
+          }
+        : {
+            className:
+              'wf-activities-program__title',
+          },
+      isClasses
+        ? createElement(
+            'span',
+            {
+              className:
+                'wf-activities-program__title-line',
+            },
+            '분반강의',
+          )
+        : activity.pageTitle ?? activity.title,
+      isClasses
+        ? createElement(
+            'span',
+            {
+              className:
+                'wf-activities-program__title-line',
+            },
+            '(입문반 · 실전반)',
+          )
+        : null,
     ),
 
     createElement(
@@ -76,7 +108,6 @@ function ProgramHeading({ activity }) {
     ),
   )
 }
-
 function SectorProgram({ activity }) {
   return createElement(
     'div',
@@ -152,6 +183,16 @@ function ClassesProgram({ activity }) {
 
 function MockProgram({ activity }) {
   const fm = activity.fmTeam
+  const fmLabel = fm?.label ?? ''
+  const fmParenIndex = fmLabel.indexOf('(')
+  const fmMainLabel =
+    fmParenIndex > 0
+      ? fmLabel.slice(0, fmParenIndex).trim()
+      : fmLabel
+  const fmSubLabel =
+    fmParenIndex > 0
+      ? fmLabel.slice(fmParenIndex).trim()
+      : null
 
   return createElement(
     'div',
@@ -177,7 +218,24 @@ function MockProgram({ activity }) {
             'div',
             { className: 'wf-activities-fm__lead' },
             createElement('span', null, 'FUND MANAGEMENT'),
-            createElement('h3', null, fm.label),
+            createElement(
+              'h3',
+              null,
+              fmMainLabel,
+              fmSubLabel
+                ? createElement('br')
+                : null,
+              fmSubLabel
+                ? createElement(
+                    'span',
+                    {
+                      className:
+                        'wf-activities-fm__sub-label',
+                    },
+                    fmSubLabel,
+                  )
+                : null,
+            ),
             createElement('strong', null, fm.participation),
             createElement('p', null, fm.aum),
           ),
