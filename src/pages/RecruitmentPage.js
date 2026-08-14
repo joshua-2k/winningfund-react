@@ -212,12 +212,7 @@ export default function RecruitmentPage() {
             {
               id: 'wf-recruitment-info-title',
             },
-            '다음 위닝펀드를 함께 만들 사람을 기다립니다.',
-          ),
-          createElement(
-            'p',
-            null,
-            '현재 확정된 모집 기간을 먼저 안내합니다. 지원 링크와 세부 전형, 문의처는 확정 정보가 들어오는 즉시 이 페이지에서 이어서 안내합니다.',
+            '다음 위닝펀드에 함께하세요.',
           ),
         ),
 
