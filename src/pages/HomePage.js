@@ -396,9 +396,7 @@ function ShortIntroduction() {
             className:
               'wf-home-intro__editorial-copy',
           },
-          '위닝펀드는 시장을 함께 공부하고,각자의 관점을 검증하며',
-          createElement('br'),
-          '근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
+          '위닝펀드는 시장을 함께 공부하고, 각자의 관점을 검증하며',
           createElement('br'),
           '근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
         ),
