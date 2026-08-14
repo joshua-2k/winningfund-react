@@ -396,7 +396,9 @@ function ShortIntroduction() {
             className:
               'wf-home-intro__editorial-copy',
           },
-          '위닝펀드는 시장을 함께 공부하고, 각자의 관점을 검증하며, 근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
+          '위닝펀드는 시장을 함께 공부하고,각자의 관점을 검증하며',
+          createElement('br'),
+          '근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
         ),
         createElement(
           'div',
@@ -462,7 +464,7 @@ function ShortIntroduction() {
                 className:
                   'wf-home-intro__proof-value wf-home-intro__proof-value--word',
               },
-              '연합',
+              '최대',
             ),
             createElement(
               'span',
@@ -470,7 +472,7 @@ function ShortIntroduction() {
                 className:
                   'wf-home-intro__proof-label',
               },
-              '국내 최대 연합투자경제동아리',
+              '국내 연합투자경제동아리',
             ),
           ),
         ),
