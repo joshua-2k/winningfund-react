@@ -664,3 +664,32 @@
     transform: none !important;
   }
 }
+
+
+/* WF DARK HEADER 2026-08 START */
+.wf-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(8, 12, 24, 0.965) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+
+.wf-header .wf-brand__name {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.wf-header .wf-nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.wf-header .wf-nav-link:hover,
+.wf-header .wf-nav-link:focus-visible,
+.wf-header .wf-nav-link--active {
+  color: #ffffff;
+}
+
+.wf-header .wf-mobile-nav__trigger {
+  color: #ffffff;
+}
+/* WF DARK HEADER 2026-08 END */
