@@ -364,3 +364,29 @@
     grid-column: 2;
   }
 }
+
+
+/* WF RECRUITMENT DUAL APPLICATION LINKS 2026-08 START */
+.wf-recruitment-action__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+  min-width: min(100%, 430px);
+}
+
+.wf-recruitment-action__buttons .wf-cta {
+  width: 100%;
+  min-width: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 48rem) {
+  .wf-recruitment-action__buttons {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr;
+  }
+}
+/* WF RECRUITMENT DUAL APPLICATION LINKS 2026-08 END */

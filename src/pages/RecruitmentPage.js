@@ -14,6 +14,12 @@ const recruitmentData =
 const siteConfig =
   selectSiteConfig(siteContentBundle)
 
+const NEW_MEMBER_APPLICATION_URL =
+  'https://cafe.naver.com/f-e/cafes/26340278/articles/40062?menuid=453&referrerAllArticles=false'
+
+const EXISTING_MEMBER_APPLICATION_URL =
+  'https://cafe.naver.com/f-e/cafes/26340278/articles/40063?menuid=453&referrerAllArticles=false'
+
 function parseLocalDate(value, endOfDay = false) {
   if (!value) return null
 
@@ -85,9 +91,7 @@ export default function RecruitmentPage() {
   const period = record?.period
   const periodState = resolvePeriodState(period)
   const term = siteConfig.currentTermId ?? '18-2'
-  const applicationAvailable = Boolean(record?.applicationUrl)
-
-  const startToken = formatDateToken(period?.startAt)
+const startToken = formatDateToken(period?.startAt)
   const endToken = formatDateToken(period?.endAt)
 
   return createElement(
@@ -250,9 +254,7 @@ export default function RecruitmentPage() {
             createElement(
               'dd',
               null,
-              applicationAvailable
-                ? '지원 링크 공개'
-                : 'TO BE UPDATED',
+              '신입 · 기존회원 지원 링크 공개',
             ),
           ),
         ),
@@ -288,26 +290,33 @@ export default function RecruitmentPage() {
           createElement(
             'p',
             null,
-            applicationAvailable
-              ? '지원서를 확인하고 위닝펀드에 합류해 보세요.'
-              : '지원 링크는 현재 준비 중입니다. 확정되는 즉시 이 버튼이 활성화됩니다.',
+            '지원 유형에 맞는 링크를 선택해 주세요.',
           ),
         ),
 
-        createElement(CTAButton, {
-          label: 'APPLY NOW',
-          intentType: 'EXTERNAL',
-          target: record?.applicationUrl,
-          availability:
-            applicationAvailable
-              ? 'AVAILABLE'
-              : 'UNAVAILABLE',
-          unavailableReason:
-            applicationAvailable
-              ? undefined
-              : '지원 링크 준비 중',
-          emphasisVariant: 'primary',
-        }),
+        createElement(
+          'div',
+          {
+            className:
+              'wf-recruitment-action__buttons',
+          },
+          createElement(CTAButton, {
+            label: '신입회원 지원 ↗',
+            intentType: 'EXTERNAL',
+            target:
+              NEW_MEMBER_APPLICATION_URL,
+            availability: 'AVAILABLE',
+            emphasisVariant: 'primary',
+          }),
+          createElement(CTAButton, {
+            label: '기존회원 지원 ↗',
+            intentType: 'EXTERNAL',
+            target:
+              EXISTING_MEMBER_APPLICATION_URL,
+            availability: 'AVAILABLE',
+            emphasisVariant: 'primary',
+          }),
+        ),
       ),
     ),
   )
