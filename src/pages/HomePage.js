@@ -1,4 +1,4 @@
-﻿import { createElement, useEffect, useRef, useState } from 'react'
+import { createElement, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import Section from '../components/Section.js'
 import SectionHeader from '../components/SectionHeader.js'
@@ -195,7 +195,7 @@ function HomeHero() {
             className:
               'wf-home-hero__kinetic-title-a11y',
           },
-          homeData.hero.englishIdentity,
+          'We always make the best choice',
         ),
 
         createElement(
@@ -207,22 +207,21 @@ function HomeHero() {
 
           createElement(HeroWordRow, {
             number: '01',
-            english: 'INVESTMENT',
+            english: 'WE ALWAYS',
             delayClass:
               'wf-home-kinetic-row--1',
           }),
 
           createElement(HeroWordRow, {
             number: '02',
-            english: 'ECONOMICS',
+            english: 'MAKE THE',
             delayClass:
               'wf-home-kinetic-row--2',
-            annotation: 'AND',
           }),
 
           createElement(HeroWordRow, {
             number: '03',
-            english: 'CLUB',
+            english: 'BEST CHOICE',
             delayClass:
               'wf-home-kinetic-row--3',
           }),
@@ -232,6 +231,8 @@ function HomeHero() {
           'div',
           {
             className: 'wf-home-kinetic-footer',
+              style: { display: 'none' },
+              'aria-hidden': 'true',
           },
 
           createElement(
@@ -1128,3 +1129,4 @@ export default function HomePage() {
     createElement(SemesterContents),
   )
 }
+
