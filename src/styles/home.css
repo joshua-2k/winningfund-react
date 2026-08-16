@@ -14789,3 +14789,225 @@
 }
 
 /* WF HOME INTERACTIVE RESEARCH BOOK 2026-08 END */
+
+/* ============================================================
+   WF MOBILE HOME FULLSCREEN HERO 2026-08 START
+   Mobile HOME opens as one complete viewport chapter.
+   ============================================================ */
+
+@media (max-width: 48rem) {
+  /*
+   * The fixed header overlays the page.
+   * Therefore HOME owns the full mobile viewport instead of
+   * subtracting header height or collapsing to content height.
+   */
+  .wf-home
+  .wf-home-hero--waves-reference {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: 100svh;
+
+    overflow: hidden !important;
+  }
+
+  @supports (height: 100dvh) {
+    .wf-home
+    .wf-home-hero--waves-reference {
+      height: 100dvh !important;
+      min-height: 100dvh !important;
+      max-height: 100dvh;
+    }
+  }
+
+  .wf-home
+  .wf-home-hero__inner.wf-home-hero__inner--kinetic-entrance {
+    box-sizing: border-box;
+
+    height: 100% !important;
+    min-height: 100% !important;
+
+    margin: 0 auto !important;
+  }
+
+  .wf-home
+  .wf-home-hero__kinetic-main {
+    box-sizing: border-box;
+
+    height: 100% !important;
+    min-height: 100% !important;
+
+    padding:
+      max(
+        84px,
+        calc(
+          env(safe-area-inset-top)
+          + 74px
+        )
+      )
+      0
+      max(
+        58px,
+        calc(
+          env(safe-area-inset-bottom)
+          + var(--wf-wave-height)
+          + 18px
+        )
+      )
+      !important;
+
+    display: grid !important;
+
+    grid-template-rows:
+      auto
+      minmax(0, 1fr)
+      auto
+      !important;
+
+    align-content: stretch !important;
+
+    gap: 0 !important;
+  }
+
+  .wf-home
+  .wf-home-hero__impact-brand {
+    align-self: start;
+
+    font-size: 0.62rem !important;
+
+    letter-spacing: 0.16em;
+  }
+
+  .wf-home
+  .wf-home-kinetic-list {
+    align-self: center !important;
+
+    padding: 0 !important;
+
+    gap:
+      clamp(
+        12px,
+        2.1vh,
+        18px
+      )
+      !important;
+  }
+
+  .wf-home
+  .wf-home-kinetic-row {
+    min-height: 0 !important;
+  }
+
+  .wf-home
+  .wf-home-kinetic-row--1
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--1
+  .wf-home-kinetic-row__reveal-word,
+  .wf-home
+  .wf-home-kinetic-row--2
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--2
+  .wf-home-kinetic-row__reveal-word,
+  .wf-home
+  .wf-home-kinetic-row--3
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--3
+  .wf-home-kinetic-row__reveal-word {
+    font-size:
+      clamp(
+        2rem,
+        9.7vw,
+        3.05rem
+      )
+      !important;
+
+    line-height: 0.92 !important;
+  }
+
+  /*
+   * Keep the existing transition wave inside the hero instead of
+   * letting it affect the first viewport's document flow.
+   */
+  .wf-home
+  .wf-home-wave--hero-to-light {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height:
+      var(--wf-wave-height);
+
+    margin: 0 !important;
+  }
+}
+
+
+/* Compact-height phones: keep all three lines comfortably visible. */
+@media
+  (max-width: 48rem)
+  and (max-height: 720px) {
+
+  .wf-home
+  .wf-home-hero__kinetic-main {
+    padding:
+      max(
+        76px,
+        calc(
+          env(safe-area-inset-top)
+          + 68px
+        )
+      )
+      0
+      max(
+        44px,
+        calc(
+          env(safe-area-inset-bottom)
+          + var(--wf-wave-height)
+          + 10px
+        )
+      )
+      !important;
+  }
+
+  .wf-home
+  .wf-home-kinetic-list {
+    gap: 9px !important;
+  }
+
+  .wf-home
+  .wf-home-kinetic-row--1
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--1
+  .wf-home-kinetic-row__reveal-word,
+  .wf-home
+  .wf-home-kinetic-row--2
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--2
+  .wf-home-kinetic-row__reveal-word,
+  .wf-home
+  .wf-home-kinetic-row--3
+  .wf-home-kinetic-row__ghost,
+  .wf-home
+  .wf-home-kinetic-row--3
+  .wf-home-kinetic-row__reveal-word {
+    font-size:
+      clamp(
+        1.9rem,
+        9.15vw,
+        2.72rem
+      )
+      !important;
+  }
+}
+
+/* WF MOBILE HOME FULLSCREEN HERO 2026-08 END */
