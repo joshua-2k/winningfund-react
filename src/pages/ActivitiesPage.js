@@ -558,7 +558,11 @@ function SmallGroups({
                   assetId: club.assetId,
                   altText: `${club.officialName} 소모임 포스터`,
                   caption: null,
-                  className: 'wf-activities-club__media',
+                  className:
+                    club.clubId === 'winnings-run'
+                    || club.clubId === 'sangeujoah'
+                      ? 'wf-activities-club__media wf-activities-club__media--fill'
+                      : 'wf-activities-club__media',
                 })
               : null,
           ),

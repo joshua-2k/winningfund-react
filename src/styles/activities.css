@@ -1270,12 +1270,12 @@
 
 /*
  * Compact poster thumbnails:
- * - keep the existing small-group card layout
- * - description stays on the left
- * - poster thumbnail stays on the right
- * - let each poster use its own natural aspect ratio
- *   so posters like 위닝스런 / 산그좋 do not show
- *   extra top/bottom whitespace.
+ * - keep the original card structure
+ * - explanation on the left
+ * - small poster thumbnail on the right
+ * - all thumbnails use the SAME frame size
+ * - 위닝스런 / 산그좋 use a fill variant so vertical blank
+ *   space disappears while the overall thumbnail size stays equal
  */
 .wf-activities-club {
   grid-template-columns:
@@ -1333,21 +1333,12 @@
     0 !important;
 }
 
-/* 핵심 수정:
-   고정 aspect-ratio를 제거해서 포스터마다
-   원본 비율대로 보이게 함 */
 .wf-activities-club__media
 .wf-responsive-media__frame {
-  width: 100% !important;
+  width: 100%;
 
   aspect-ratio:
-    auto !important;
-
-  height:
-    auto !important;
-
-  min-height:
-    0 !important;
+    0.72 !important;
 
   overflow: hidden;
 
@@ -1365,19 +1356,13 @@
     8px;
 
   background:
-    transparent !important;
+    #f4f7fb;
 }
 
 .wf-activities-club__media
 .wf-responsive-media__image {
-  display:
-    block;
-
-  width:
-    100% !important;
-
-  height:
-    auto !important;
+  width: 100%;
+  height: 100%;
 
   object-fit:
     contain !important;
@@ -1387,6 +1372,18 @@
 
   transform:
     none !important;
+}
+
+/* 위닝스런 / 산그좋:
+   같은 박스 크기는 유지하되, 위아래 빈공간이 생기지 않게
+   cover로 채움 */
+.wf-activities-club__media--fill
+.wf-responsive-media__image {
+  object-fit:
+    cover !important;
+
+  object-position:
+    center center !important;
 }
 
 .wf-activities-club__media
