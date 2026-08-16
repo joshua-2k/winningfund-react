@@ -51,6 +51,12 @@ jobs:
       - name: Build
         run: npm run build -- --base=/
 
+      - name: Generate static SEO pages
+        run: npm run seo:build
+
+      - name: Verify SEO output
+        run: npm run verify:seo
+
       # GitHub Pages SPA fallback
       - name: Create SPA fallback
         run: cp dist/index.html dist/404.html

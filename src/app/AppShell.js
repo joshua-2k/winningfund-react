@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 import Header from '../components/Header.js'
 import Footer from '../components/Footer.js'
 import PageTransition from '../components/PageTransition.js'
+import SeoManager from '../components/SeoManager.js'
 import useRouteTransition from './useRouteTransition.js'
 import logoUrl from '../assets/brand/winningfund-logo.png'
 import {
@@ -61,6 +62,7 @@ export default function AppShell() {
     createElement(
       'div',
       { className: 'wf-app-shell' },
+      createElement(SeoManager),
       createElement(Header, {
         brand,
         navigationItems,

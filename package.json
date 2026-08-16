@@ -14,7 +14,9 @@
     "verify:routes": "node scripts/verify-routes.mjs",
     "verify:content": "node scripts/verify-content-boundary.mjs",
     "verify:primitives": "node scripts/verify-shared-primitives.mjs",
-    "verify:home": "node scripts/verify-home.mjs"
+    "verify:home": "node scripts/verify-home.mjs",
+    "seo:build": "node scripts/generate-seo-pages.mjs",
+    "verify:seo": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "react": "19.2.8",
