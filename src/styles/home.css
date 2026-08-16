@@ -14329,3 +14329,463 @@
   display: none !important;
 }
 /* WF HOME HERO NO HORIZONTAL LINES 2026-08 END */
+
+/* ============================================================
+   WF HOME INTERACTIVE RESEARCH BOOK 2026-08 START
+   HOME only:
+   - soft section snap is owned by HomeMagneticScroll.js
+   - section entrance choreography
+   - small desktop reading-progress indicator
+   ============================================================ */
+
+/* Each major HOME chapter lands below the fixed header. */
+.wf-home--research-book
+.wf-home-book-section {
+  scroll-margin-top:
+    clamp(
+      4.5rem,
+      6.5vw,
+      5.75rem
+    );
+}
+
+/* ------------------------------------------------------------
+   RESEARCH-BOOK REVEAL
+   Only activates after JS marks HOME as research-book enabled.
+   Hero keeps its existing entrance animation.
+   ------------------------------------------------------------ */
+@media
+  (prefers-reduced-motion: no-preference) {
+
+  .wf-home--research-book
+  .wf-home-intro
+  .wf-home-intro__headline,
+  .wf-home--research-book
+  .wf-home-intro
+  .wf-home-intro__editorial-copy,
+  .wf-home--research-book
+  .wf-home-intro
+  .wf-home-intro__proof-item,
+
+  .wf-home--research-book
+  .wf-home-programs
+  .wf-home-programs__headline,
+  .wf-home--research-book
+  .wf-home-programs
+  .wf-home-programs__kicker,
+  .wf-home--research-book
+  .wf-home-programs
+  .wf-home-program,
+
+  .wf-home--research-book
+  .wf-home-mission
+  .wf-home-mission__eyebrow,
+  .wf-home--research-book
+  .wf-home-mission
+  .wf-home-mission__item,
+
+  .wf-home--research-book
+  .wf-home-semester
+  .wf-home-semester__heading-copy,
+  .wf-home--research-book
+  .wf-home-semester
+  .wf-home-semester__month {
+    opacity: 0;
+    transform:
+      translate3d(
+        0,
+        22px,
+        0
+      );
+    transition:
+      opacity
+      640ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+      transform
+      640ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+  }
+
+  /* INTRO: title -> copy -> proof */
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__headline {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__editorial-copy {
+    opacity: 1;
+    transform: none;
+    transition-delay: 150ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__proof-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__proof-item:nth-child(1) {
+    transition-delay: 240ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__proof-item:nth-child(2) {
+    transition-delay: 315ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-intro__proof-item:nth-child(3) {
+    transition-delay: 390ms;
+  }
+
+  /* ACTIVITIES: headline -> kicker -> cards */
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-programs__headline {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-programs__kicker {
+    opacity: 1;
+    transform: none;
+    transition-delay: 145ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-program {
+    opacity: 1;
+    transform: none;
+    transition-delay:
+      calc(
+        235ms
+        +
+        var(
+          --wf-program-order,
+          0
+        )
+        * 72ms
+      );
+  }
+
+  /* MISSION: title -> three statements */
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-mission__eyebrow {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-mission__item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-mission__item:nth-child(1) {
+    transition-delay: 175ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-mission__item:nth-child(2) {
+    transition-delay: 270ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-mission__item:nth-child(3) {
+    transition-delay: 365ms;
+  }
+
+  /* SCHEDULE: heading -> month columns */
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__heading-copy {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__month {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__month:nth-child(1) {
+    transition-delay: 170ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__month:nth-child(2) {
+    transition-delay: 245ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__month:nth-child(3) {
+    transition-delay: 320ms;
+  }
+
+  .wf-home--research-book
+  .wf-home-book-section--seen
+  .wf-home-semester__month:nth-child(4) {
+    transition-delay: 395ms;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   DESKTOP READING PROGRESS
+   Tiny and quiet: 01/05 + five steps + current chapter label.
+   ------------------------------------------------------------ */
+.wf-home-book-progress {
+  position: fixed;
+  z-index: 24;
+  top: 50%;
+  right:
+    clamp(
+      16px,
+      2.1vw,
+      34px
+    );
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 10px 7px;
+  color:
+    rgba(
+      224,
+      234,
+      249,
+      0.72
+    );
+  background:
+    rgba(
+      5,
+      14,
+      31,
+      0.48
+    );
+  border:
+    1px
+    solid
+    rgba(
+      201,
+      222,
+      251,
+      0.12
+    );
+  border-radius: 999px;
+  backdrop-filter:
+    blur(12px);
+  -webkit-backdrop-filter:
+    blur(12px);
+  box-shadow:
+    0
+    12px
+    36px
+    rgba(
+      0,
+      0,
+      0,
+      0.11
+    );
+  transform:
+    translateY(-50%);
+}
+
+.wf-home-book-progress__count {
+  font-size: 0.53rem;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-variant-numeric:
+    tabular-nums;
+  white-space: nowrap;
+}
+
+.wf-home-book-progress__rail {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 3px 0;
+}
+
+.wf-home-book-progress__rail::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 7px;
+  bottom: 7px;
+  left: 50%;
+  width: 1px;
+  background:
+    rgba(
+      213,
+      228,
+      249,
+      0.18
+    );
+  transform:
+    translateX(-50%);
+}
+
+.wf-home-book-progress__dot {
+  position: relative;
+  z-index: 1;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background:
+    rgba(
+      219,
+      231,
+      248,
+      0.32
+    );
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      5,
+      14,
+      31,
+      0.72
+    );
+  transition:
+    width 180ms ease,
+    height 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.wf-home-book-progress__dot:hover,
+.wf-home-book-progress__dot:focus-visible {
+  background:
+    rgba(
+      148,
+      215,
+      255,
+      0.82
+    );
+  outline: none;
+}
+
+.wf-home-book-progress__dot.is-active {
+  width: 8px;
+  height: 8px;
+  background: #78d4ff;
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      5,
+      14,
+      31,
+      0.76
+    ),
+    0
+    0
+    12px
+    rgba(
+      120,
+      212,
+      255,
+      0.35
+    );
+}
+
+.wf-home-book-progress__label {
+  writing-mode:
+    vertical-rl;
+  transform:
+    rotate(180deg);
+  color:
+    rgba(
+      219,
+      232,
+      250,
+      0.52
+    );
+  font-size: 0.47rem;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: 0.13em;
+}
+
+
+/* No forced snap/progress UI on touch or narrow layouts.
+   The reveal choreography remains subtle and works naturally. */
+@media
+  (max-width: 63.99rem),
+  (hover: none),
+  (pointer: coarse) {
+
+  .wf-home-book-progress {
+    display: none !important;
+  }
+}
+
+
+/* Accessibility: all content is immediately visible. */
+@media
+  (prefers-reduced-motion: reduce) {
+
+  .wf-home--research-book
+  .wf-home-book-section * {
+    transition-duration:
+      0.01ms
+      !important;
+    animation-duration:
+      0.01ms
+      !important;
+    animation-iteration-count:
+      1
+      !important;
+  }
+}
+
+/* WF HOME INTERACTIVE RESEARCH BOOK 2026-08 END */
