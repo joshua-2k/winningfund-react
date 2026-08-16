@@ -390,3 +390,70 @@
   }
 }
 /* WF RECRUITMENT DUAL APPLICATION LINKS 2026-08 END */
+
+/* WF RECRUITMENT APPLICATION NOTE 2026-08 START */
+
+.wf-recruitment-facts__application {
+  display:
+    grid;
+
+  gap:
+    9px;
+}
+
+.wf-recruitment-facts__application strong {
+  color:
+    #0a1730;
+
+  font: inherit;
+
+  font-weight:
+    790;
+}
+
+.wf-recruitment-facts__application small {
+  display:
+    block;
+
+  max-width:
+    38em;
+
+  color:
+    #7c899c;
+
+  font-size:
+    clamp(
+      0.72rem,
+      0.9vw,
+      0.82rem
+    );
+
+  font-weight:
+    550;
+
+  line-height:
+    1.55;
+
+  letter-spacing:
+    -0.015em;
+
+  word-break:
+    keep-all;
+}
+
+@media (max-width: 40rem) {
+  .wf-recruitment-facts__application {
+    gap:
+      7px;
+  }
+
+  .wf-recruitment-facts__application small {
+    font-size:
+      0.72rem;
+
+    line-height:
+      1.5;
+  }
+}
+
+/* WF RECRUITMENT APPLICATION NOTE 2026-08 END */

@@ -264,8 +264,20 @@ createElement(
             createElement('dt', null, 'APPLICATION'),
             createElement(
               'dd',
-              null,
-              '신입 · 기존회원 지원 링크 공개',
+              {
+                className:
+                  'wf-recruitment-facts__application',
+              },
+              createElement(
+                'strong',
+                null,
+                '신입 · 기존회원 지원 링크 공개',
+              ),
+              createElement(
+                'small',
+                null,
+                '지원은 페이지 하단의 신입회원·기존회원 지원 링크를 참고해 주세요.',
+              ),
             ),
           ),
         ),
