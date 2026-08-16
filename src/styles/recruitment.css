@@ -457,3 +457,50 @@
 }
 
 /* WF RECRUITMENT APPLICATION NOTE 2026-08 END */
+
+/* WF RECRUITMENT TERM SPACING 2026-08 START */
+
+/*
+ * Keep the generation label compact while giving the hyphen
+ * slightly more visual breathing room.
+ *
+ * 18-2  -> visually closer to 18 - 2,
+ * but much subtler than literal spaces.
+ */
+.wf-recruitment-term-label {
+  display:
+    inline-flex;
+
+  align-items:
+    baseline;
+
+  white-space:
+    nowrap;
+}
+
+.wf-recruitment-term-label__part {
+  display:
+    inline-block;
+}
+
+.wf-recruitment-term-label__hyphen {
+  display:
+    inline-block;
+
+  margin-inline:
+    0.13em
+    0.12em;
+
+  letter-spacing:
+    0;
+}
+
+.wf-recruitment-term-label__suffix {
+  display:
+    inline-block;
+
+  margin-left:
+    0.62em;
+}
+
+/* WF RECRUITMENT TERM SPACING 2026-08 END */

@@ -86,6 +86,86 @@ function formatDateToken(value) {
   return `${month}.${day}`
 }
 
+function RecruitmentTermLabel({
+  term,
+  suffix = null,
+}) {
+  const parts =
+    String(term ?? '')
+      .split('-')
+
+  if (parts.length !== 2) {
+    return createElement(
+      'span',
+      {
+        className:
+          'wf-recruitment-term-label',
+      },
+      term,
+      suffix
+        ? ` ${suffix}`
+        : null,
+    )
+  }
+
+  const [
+    first,
+    second,
+  ] = parts
+
+  return createElement(
+    'span',
+    {
+      className:
+        'wf-recruitment-term-label',
+      'aria-label':
+        `${first}-${second}${suffix ? ` ${suffix}` : ''}`,
+    },
+
+    createElement(
+      'span',
+      {
+        className:
+          'wf-recruitment-term-label__part',
+        'aria-hidden': 'true',
+      },
+      first,
+    ),
+
+    createElement(
+      'span',
+      {
+        className:
+          'wf-recruitment-term-label__hyphen',
+        'aria-hidden': 'true',
+      },
+      '-',
+    ),
+
+    createElement(
+      'span',
+      {
+        className:
+          'wf-recruitment-term-label__part',
+        'aria-hidden': 'true',
+      },
+      second,
+    ),
+
+    suffix
+      ? createElement(
+          'span',
+          {
+            className:
+              'wf-recruitment-term-label__suffix',
+            'aria-hidden': 'true',
+          },
+          suffix,
+        )
+      : null,
+  )
+}
+
 export default function RecruitmentPage() {
   const { record } = recruitmentData
   const period = record?.period
@@ -140,7 +220,13 @@ createElement(
             {
               className: 'wf-recruitment-hero__term',
             },
-            `${term} RECRUITMENT`,
+            createElement(
+              RecruitmentTermLabel,
+              {
+                term,
+                suffix: 'RECRUITMENT',
+              },
+            ),
           ),
         ),
 
@@ -242,7 +328,16 @@ createElement(
             null,
             createElement('span', { 'aria-hidden': 'true' }, '01'),
             createElement('dt', null, 'TERM'),
-            createElement('dd', null, term),
+            createElement(
+              'dd',
+              null,
+              createElement(
+                RecruitmentTermLabel,
+                {
+                  term,
+                },
+              ),
+            ),
           ),
 
           createElement(
@@ -308,7 +403,12 @@ createElement(
             {
               id: 'wf-recruitment-action-title',
             },
-            `${term}`,
+            createElement(
+              RecruitmentTermLabel,
+              {
+                term,
+              },
+            ),
           ),
           createElement(
             'p',
