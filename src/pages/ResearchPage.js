@@ -2,13 +2,11 @@
 import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import { RouteHeroTitle } from '../components/RouteHeroEffects.js'
 
-/*
- * Add the two Naver Cafe archive board URLs here later.
- * Leave an empty string until each board is ready.
- */
 const researchArchiveLinks = Object.freeze({
-  individual: '',
-  team: '',
+  individual:
+    'https://cafe.naver.com/f-e/cafes/26340278/menus/507?viewType=L',
+  team:
+    'https://cafe.naver.com/f-e/cafes/26340278/menus/508',
 })
 
 const archiveGroups = Object.freeze([
@@ -30,31 +28,36 @@ const archiveGroups = Object.freeze([
   },
 ])
 
-function isReadyUrl(value) {
-  return /^https?:\/\//i.test(
-    String(value ?? '').trim(),
-  )
-}
-
 function ArchiveGateway({
   group,
 }) {
   const url =
     researchArchiveLinks[group.id]
 
-  const content =
+  return createElement(
+    'a',
+    {
+      className:
+        'wf-research-gateway wf-research-gateway--ready',
+      href: url,
+      target: '_blank',
+      rel: 'noreferrer',
+    },
+
     createElement(
       'div',
       {
         className:
           'wf-research-gateway__content',
       },
+
       createElement(
         'div',
         {
           className:
             'wf-research-gateway__meta',
         },
+
         createElement(
           'span',
           {
@@ -63,6 +66,7 @@ function ArchiveGateway({
           },
           group.index,
         ),
+
         createElement(
           'span',
           {
@@ -72,11 +76,13 @@ function ArchiveGateway({
           group.label,
         ),
       ),
+
       createElement(
         'h3',
         null,
         group.title,
       ),
+
       createElement(
         'p',
         {
@@ -85,53 +91,24 @@ function ArchiveGateway({
         },
         group.description,
       ),
-    )
+    ),
 
-  if (isReadyUrl(url)) {
-    return createElement(
-      'a',
-      {
-        className:
-          'wf-research-gateway wf-research-gateway--ready',
-        href: url,
-        target: '_blank',
-        rel: 'noreferrer',
-      },
-      content,
-      createElement(
-        'span',
-        {
-          className:
-            'wf-research-gateway__action',
-          'aria-hidden': 'true',
-        },
-        '카페에서 보기',
-        createElement(
-          'span',
-          {
-            className:
-              'wf-research-gateway__arrow',
-          },
-          '↗',
-        ),
-      ),
-    )
-  }
-
-  return createElement(
-    'article',
-    {
-      className:
-        'wf-research-gateway wf-research-gateway--pending',
-    },
-    content,
     createElement(
       'span',
       {
         className:
           'wf-research-gateway__action',
+        'aria-hidden': 'true',
       },
-      '카페 링크 준비 중',
+      '카페에서 보기',
+      createElement(
+        'span',
+        {
+          className:
+            'wf-research-gateway__arrow',
+        },
+        '↗',
+      ),
     ),
   )
 }
@@ -169,12 +146,14 @@ export default function ResearchPage() {
         'aria-labelledby':
           'wf-research-title',
       },
+
       createElement(
         'div',
         {
           className:
             'wf-research-hero__inner',
         },
+
         createElement(
           'p',
           {
@@ -183,6 +162,7 @@ export default function ResearchPage() {
           },
           'WINNINGFUND RESEARCH',
         ),
+
         createElement(
           RouteHeroTitle,
           {
@@ -192,6 +172,7 @@ export default function ResearchPage() {
             title: 'RESEARCH',
           },
         ),
+
         createElement(
           'div',
           {
@@ -200,11 +181,13 @@ export default function ResearchPage() {
             'aria-label':
               'Research archive types',
           },
+
           createElement(
             'span',
             null,
             'INDIVIDUAL REPORT',
           ),
+
           createElement(
             'span',
             null,
@@ -222,6 +205,7 @@ export default function ResearchPage() {
         'aria-labelledby':
           'wf-research-archive-title',
       },
+
       createElement(
         'div',
         {
@@ -235,6 +219,7 @@ export default function ResearchPage() {
             className:
               'wf-research-archive__header',
           },
+
           createElement(
             'p',
             {
@@ -243,6 +228,7 @@ export default function ResearchPage() {
             },
             'SELECTED REPORTS',
           ),
+
           createElement(
             'h2',
             {
@@ -251,6 +237,7 @@ export default function ResearchPage() {
             },
             '우수 리포트 아카이브',
           ),
+
           createElement(
             'p',
             {
@@ -269,6 +256,7 @@ export default function ResearchPage() {
             'aria-label':
               '우수 리포트 카페 아카이브',
           },
+
           ...archiveGroups.map(
             (group) =>
               createElement(
