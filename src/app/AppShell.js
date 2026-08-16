@@ -48,7 +48,7 @@ export default function AppShell() {
       ),
       createElement(Footer, {
         siteName: siteConfig.siteName,
-        secondaryText: '투자·경제 학회',
+        secondaryText: '투자·경제 동아리',
       }),
     ),
   )
