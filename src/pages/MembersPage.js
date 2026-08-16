@@ -144,14 +144,6 @@ export default function MembersPage() {
           className: 'wf-members-hero__title',
           title: 'MEMBERS',
         }),
-
-        createElement(
-          'p',
-          {
-            className: 'wf-members-hero__copy',
-          },
-          '위닝펀드를 거쳐간 1-1기부터 현재까지, 모든 기수의 발자취를 소개합니다.',
-        ),
       ),
 
       createElement(RouteHeroWave, { waveId: 'wf-members-route-wave', surface: 'soft' }),

@@ -45,13 +45,6 @@ export default function ResearchPage() {
           title: 'RESEARCH',
         }),
         createElement(
-          'p',
-          {
-            className: 'wf-research-hero__copy',
-          },
-          '우리가 분석하고, 검증한 결과를 기록합니다.',
-        ),
-        createElement(
           'div',
           {
             className: 'wf-research-hero__taxonomy',

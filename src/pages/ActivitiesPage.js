@@ -813,14 +813,6 @@ export default function ActivitiesPage() {
             'wf-activities-hero__title',
           title: 'ACTIVITIES',
         }),
-        createElement(
-          'p',
-          {
-            className:
-              'wf-activities-hero__copy',
-          },
-          activitiesPage?.heroSummary,
-        ),
       ),
       createElement(RouteHeroWave, {
         waveId:
