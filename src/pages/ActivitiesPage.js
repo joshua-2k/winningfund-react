@@ -641,11 +641,11 @@ export default function ActivitiesPage() {
   const navItems = [
     ...programs.map((activity) => ({
       id: activity.activityId,
-      label: activity.programNumber,
+      label: `학술활동 ${activity.programNumber}`,
     })),
     {
       id: 'other-academic',
-      label: '학술활동',
+      label: '그 외',
     },
     {
       id: 'small-groups',
