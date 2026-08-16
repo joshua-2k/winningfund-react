@@ -693,3 +693,85 @@
   color: #ffffff;
 }
 /* WF DARK HEADER 2026-08 END */
+
+/* ============================================================
+   WF MOBILE MENU SCALE 2026-08 START
+   Slightly smaller mobile table-of-contents/navigation labels.
+   Desktop navigation is untouched.
+   ============================================================ */
+
+@media (max-width: 59.99rem) {
+  .wf-mobile-nav__list {
+    gap:
+      clamp(
+        6px,
+        1.1vh,
+        13px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__link {
+    min-height:
+      clamp(
+        54px,
+        8.7vh,
+        80px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__label {
+    font-size:
+      clamp(
+        1.88rem,
+        9.1vw,
+        3.75rem
+      )
+      !important;
+
+    line-height:
+      0.95
+      !important;
+  }
+}
+
+@media (max-width: 30rem) {
+  .wf-mobile-nav__panel {
+    padding-top:
+      clamp(
+        30px,
+        5.2vh,
+        48px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__list {
+    gap:
+      5px
+      !important;
+  }
+
+  .wf-mobile-nav__link {
+    min-height:
+      clamp(
+        50px,
+        8vh,
+        66px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__label {
+    font-size:
+      clamp(
+        1.72rem,
+        8.8vw,
+        2.78rem
+      )
+      !important;
+  }
+}
+
+/* WF MOBILE MENU SCALE 2026-08 END */
