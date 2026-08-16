@@ -660,3 +660,341 @@
       !important;
   }
 }
+
+/* ============================================================
+   WF MOBILE NATIVE SOFT SNAP + MEMBERS 3-COLUMN 2026-08 START
+
+   CSS-only implementation:
+   - native vertical proximity snap on touch / mobile
+   - no touchmove interception
+   - no JS timer / wheel controller changes
+   - MEMBERS current team = 3 columns on phones
+   ============================================================ */
+
+@media
+  (max-width: 63.99rem),
+  (hover: none),
+  (pointer: coarse) {
+
+  /*
+   * PROXIMITY = normal scrolling first.
+   * The browser only settles onto a snap point when the user
+   * finishes a gesture sufficiently close to one.
+   */
+  html {
+    scroll-snap-type:
+      y
+      proximity;
+  }
+
+  /*
+   * HOME
+   */
+  .wf-home-hero,
+  .wf-home-intro,
+  .wf-home-programs,
+  .wf-home-mission,
+  .wf-home-semester,
+
+  /*
+   * ABOUT
+   */
+  .wf-about-hero,
+  .wf-about-section--intro,
+  .wf-about-section--external,
+  .wf-about-section--social,
+
+  /*
+   * MEMBERS
+   */
+  .wf-members-hero,
+  .wf-members-section--current,
+  .wf-members-section--history,
+
+  /*
+   * ACTIVITIES
+   */
+  .wf-activities-hero,
+  .wf-activities-intro,
+  .wf-activities-internal-nav,
+
+  /*
+   * RESEARCH
+   */
+  .wf-research-hero,
+  .wf-research-archive,
+
+  /*
+   * RECRUITMENT
+   */
+  .wf-recruitment-hero,
+  .wf-recruitment-info,
+  .wf-recruitment-action {
+    scroll-snap-align:
+      start;
+
+    scroll-snap-stop:
+      normal;
+
+    scroll-margin-top:
+      clamp(
+        4rem,
+        15vw,
+        5rem
+      );
+  }
+
+  /*
+   * Hero sections can align exactly to the viewport start.
+   * Content sections keep the fixed header offset above.
+   */
+  .wf-home-hero,
+  .wf-about-hero,
+  .wf-members-hero,
+  .wf-activities-hero,
+  .wf-research-hero,
+  .wf-recruitment-hero {
+    scroll-margin-top:
+      0;
+  }
+}
+
+
+/* ============================================================
+   MEMBERS — PHONE CURRENT TEAM 3 x 3
+   Existing members.css forces 1 column at <= 40rem.
+   These final overrides restore the PC-style 3-column rhythm,
+   while scaling portraits / typography for phone width.
+   ============================================================ */
+
+@media (max-width: 40rem) {
+
+  .wf-members
+  .wf-member-grid--members-current {
+    display:
+      grid
+      !important;
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      )
+      !important;
+
+    grid-auto-rows:
+      auto
+      !important;
+
+    column-gap:
+      clamp(
+        6px,
+        2.4vw,
+        11px
+      )
+      !important;
+
+    row-gap:
+      clamp(
+        24px,
+        7vw,
+        34px
+      )
+      !important;
+
+    align-items:
+      start
+      !important;
+  }
+
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-member-card {
+    min-width:
+      0
+      !important;
+
+    width:
+      100%
+      !important;
+
+    height:
+      auto
+      !important;
+
+    display:
+      grid
+      !important;
+
+    grid-template-rows:
+      auto
+      auto
+      !important;
+
+    align-content:
+      start
+      !important;
+  }
+
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-responsive-media,
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-member-card__media-fallback {
+    width:
+      min(
+        86px,
+        22vw
+      )
+      !important;
+
+    max-width:
+      100%
+      !important;
+
+    margin-inline:
+      auto
+      !important;
+
+    aspect-ratio:
+      1
+      !important;
+
+    border-width:
+      3px
+      !important;
+  }
+
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-member-card__body {
+    width:
+      100%
+      !important;
+
+    min-height:
+      0
+      !important;
+
+    margin:
+      10px
+      auto
+      0
+      !important;
+
+    padding-top:
+      8px
+      !important;
+
+    display:
+      grid
+      !important;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      !important;
+
+    justify-items:
+      center
+      !important;
+
+    align-content:
+      start
+      !important;
+
+    gap:
+      3px
+      !important;
+
+    text-align:
+      center
+      !important;
+  }
+
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-member-card__name {
+    max-width:
+      100%;
+
+    font-size:
+      clamp(
+        0.72rem,
+        3.2vw,
+        0.86rem
+      )
+      !important;
+
+    line-height:
+      1.12
+      !important;
+
+    letter-spacing:
+      -0.035em
+      !important;
+
+    white-space:
+      nowrap;
+
+    overflow:
+      hidden;
+
+    text-overflow:
+      ellipsis;
+  }
+
+
+  .wf-members
+  .wf-member-grid--members-current
+  .wf-member-card__role {
+    max-width:
+      100%;
+
+    font-size:
+      clamp(
+        0.46rem,
+        2.1vw,
+        0.58rem
+      )
+      !important;
+
+    line-height:
+      1.22
+      !important;
+
+    text-align:
+      center;
+
+    white-space:
+      normal;
+
+    word-break:
+      keep-all;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION / USER PREFERENCE
+   Do not add scroll snapping when reduced motion is requested.
+   ============================================================ */
+
+@media
+  (max-width: 63.99rem)
+  and
+  (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-snap-type:
+      none
+      !important;
+  }
+}
+
+/* WF MOBILE NATIVE SOFT SNAP + MEMBERS 3-COLUMN 2026-08 END */
