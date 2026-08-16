@@ -15046,3 +15046,62 @@
 }
 
 /* WF MOBILE HOME PROGRAM KICKER HIDE 2026-08 END */
+
+/* WF MOBILE HOME INTRO LINEBREAK 2026-08 START */
+
+/* Desktop keeps the existing two-line editorial copy. */
+.wf-home-intro__copy-desktop {
+  display:
+    inline;
+}
+
+.wf-home-intro__copy-mobile {
+  display:
+    none;
+}
+
+/*
+ * Mobile uses four intentional lines so no short fragment such as
+ * "검증하며" is left alone by automatic wrapping.
+ */
+@media (max-width: 48rem) {
+  .wf-home-intro__copy-desktop {
+    display:
+      none;
+  }
+
+  .wf-home-intro__copy-mobile {
+    display:
+      block;
+  }
+
+  .wf-home-intro__copy-mobile-line {
+    display:
+      block;
+
+    width:
+      fit-content;
+
+    max-width:
+      100%;
+
+    white-space:
+      nowrap;
+  }
+}
+
+/*
+ * Very narrow phones may need natural wrapping rather than overflow.
+ * This only activates below 22rem.
+ */
+@media (max-width: 22rem) {
+  .wf-home-intro__copy-mobile-line {
+    width:
+      auto;
+
+    white-space:
+      normal;
+  }
+}
+
+/* WF MOBILE HOME INTRO LINEBREAK 2026-08 END */

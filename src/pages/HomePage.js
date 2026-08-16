@@ -394,10 +394,62 @@ function ShortIntroduction() {
           {
             className:
               'wf-home-intro__editorial-copy',
+            'aria-label':
+              '위닝펀드는 시장을 함께 공부하고, 각자의 관점을 검증하며 근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
           },
-          '위닝펀드는 시장을 함께 공부하고, 각자의 관점을 검증하며',
-          createElement('br'),
-          '근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
+
+          createElement(
+            'span',
+            {
+              className:
+                'wf-home-intro__copy-desktop',
+              'aria-hidden': 'true',
+            },
+            '위닝펀드는 시장을 함께 공부하고, 각자의 관점을 검증하며',
+            createElement('br'),
+            '근거 있는 투자 판단을 만들어가는 대학 연합투자경제동아리입니다.',
+          ),
+
+          createElement(
+            'span',
+            {
+              className:
+                'wf-home-intro__copy-mobile',
+              'aria-hidden': 'true',
+            },
+            createElement(
+              'span',
+              {
+                className:
+                  'wf-home-intro__copy-mobile-line',
+              },
+              '위닝펀드는 시장을 함께 공부하고,',
+            ),
+            createElement(
+              'span',
+              {
+                className:
+                  'wf-home-intro__copy-mobile-line',
+              },
+              '각자의 관점을 검증하며',
+            ),
+            createElement(
+              'span',
+              {
+                className:
+                  'wf-home-intro__copy-mobile-line',
+              },
+              '근거 있는 투자 판단을 만들어가는',
+            ),
+            createElement(
+              'span',
+              {
+                className:
+                  'wf-home-intro__copy-mobile-line',
+              },
+              '대학 연합투자경제동아리입니다.',
+            ),
+          ),
         ),
         createElement(
           'div',
