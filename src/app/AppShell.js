@@ -12,7 +12,34 @@ import {
 } from '../content/index.js'
 
 const siteConfig = selectSiteConfig(siteContentBundle)
-const navigationItems = selectNavigation(siteContentBundle)
+/* WF PRIMARY NAV WITHOUT HOME + RESEARCH 2026-08 START */
+const sourceNavigationItems =
+  selectNavigation(siteContentBundle)
+
+const researchNavigationItem =
+  Object.freeze({
+    id: 'research',
+    label: 'RESEARCH',
+    routeId: 'RESEARCH',
+    order: 5,
+    visibility: 'VISIBLE',
+    path: '/research',
+  })
+
+const navigationItems =
+  Object.freeze([
+    ...sourceNavigationItems.filter(
+      (item) =>
+        item.routeId !== 'HOME' &&
+        item.routeId !== 'RECRUITMENT',
+    ),
+    researchNavigationItem,
+    ...sourceNavigationItems.filter(
+      (item) =>
+        item.routeId === 'RECRUITMENT',
+    ),
+  ])
+/* WF PRIMARY NAV WITHOUT HOME + RESEARCH 2026-08 END */
 
 const brand = Object.freeze({
   siteName: siteConfig.siteName,

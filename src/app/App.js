@@ -5,6 +5,7 @@ import HomePage from '../pages/HomePage.js'
 import AboutPage from '../pages/AboutPage.js'
 import MembersPage from '../pages/MembersPage.js'
 import ActivitiesPage from '../pages/ActivitiesPage.js'
+import ResearchPage from '../pages/ResearchPage.js'
 import RecruitmentPage from '../pages/RecruitmentPage.js'
 import NotFoundPage from '../pages/NotFoundPage.js'
 
@@ -30,6 +31,10 @@ export default function App() {
       createElement(Route, {
         path: 'activities',
         element: createElement(ActivitiesPage),
+      }),
+      createElement(Route, {
+        path: 'research',
+        element: createElement(ResearchPage),
       }),
       createElement(Route, {
         path: 'recruitment',
