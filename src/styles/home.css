@@ -14251,3 +14251,46 @@
   }
 }
 /* WF HOME HERO EQUAL LINE SIZE 2026-08 END */
+
+
+/* WF HOME META + MISSION CLEANUP 2026-08 START */
+.wf-home-section-index {
+  display: none !important;
+}
+
+.wf-home-intro__editorial {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.wf-home-programs__header {
+  margin-top: 0 !important;
+}
+
+.wf-home-mission__editorial {
+  margin-top: 0 !important;
+}
+
+.wf-home-mission__header {
+  padding-top: 0 !important;
+}
+
+.wf-home-mission__copy {
+  max-width: 58ch !important;
+}
+
+.wf-home-rail {
+  display: none !important;
+}
+
+@media (max-width: 48rem) {
+  .wf-home-programs__header,
+  .wf-home-mission__editorial {
+    margin-top: 0 !important;
+  }
+
+  .wf-home-mission__copy {
+    max-width: none !important;
+  }
+}
+/* WF HOME META + MISSION CLEANUP 2026-08 END */

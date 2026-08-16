@@ -82,21 +82,21 @@ const source = {
           "id": "depth-in-joy",
           "order": 1,
           "heading": "즐거움 속에 담긴 깊이",
-          "description": "학술적 치열함과 사람 냄새 나는 따뜻함이 공존합니다",
+          "description": "기업분석과 자산운용 등 학술활동에 깊이 몰입하면서도, 다양한 친목 활동을 통해 함께 성장하는 즐거움을 만들어갑니다.",
           "sourceStatus": "SOURCE_BACKED_REVIEWABLE"
         },
         {
           "id": "connection-beyond-comfort",
           "order": 2,
           "heading": "안주하지 않는 연결",
-          "description": "우리만의 리그를 넘어, 더 넓은 세상과 호흡합니다",
+          "description": "위닝인의 밤과 현직자 강연 등 다양한 교류의 장을 통해 선후배와 금융업계 실무자를 연결하고, 동아리 안에 머무르지 않는 네트워크를 만들어갑니다.",
           "sourceStatus": "SOURCE_BACKED_REVIEWABLE"
         },
         {
           "id": "virtuous-impact-cycle",
           "order": 3,
           "heading": "선한 영향력의 선순환",
-          "description": "올바른 철학을 가진 투자자를 배양하고 사회와 가치를 나눕니다",
+          "description": "자산운용팀의 운용 수익 일부를 기부하며, 투자에서 얻은 성과가 우리 안에 머무르지 않고 사회에 긍정적인 가치로 이어지도록 합니다.",
           "sourceStatus": "SOURCE_BACKED_REVIEWABLE"
         }
       ]

@@ -2,7 +2,6 @@ import { createElement, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import Section from '../components/Section.js'
 import SectionHeader from '../components/SectionHeader.js'
-import HomeSectionRail from '../components/HomeSectionRail.js'
 import HomeMagneticScroll from '../components/HomeMagneticScroll.js'
 import WinningFundBrushSignature from '../components/WinningFundBrushSignature.js'
 import {
@@ -854,14 +853,6 @@ function MissionSection() {
           },
           'OUR MISSION',
         ),
-
-        createElement(
-          'h2',
-          {
-            className: 'wf-home-mission__title',
-          },
-          mission.title,
-        ),
       ),
 
       createElement(
@@ -1098,9 +1089,7 @@ export default function HomePage() {
     { className: 'wf-home' },
 
     createElement(HomeMagneticScroll),
-    createElement(HomeSectionRail),
-
-    createElement(HomeHero),
+createElement(HomeHero),
 
     createElement(ShortIntroduction),
 
