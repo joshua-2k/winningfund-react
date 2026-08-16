@@ -1269,8 +1269,13 @@
 /* WF ACTIVITIES SMALL GROUP POSTERS V1 START */
 
 /*
- * Keep the original small-group card.
- * Only add a small poster thumbnail beside the description.
+ * Compact poster thumbnails:
+ * - keep the existing small-group card layout
+ * - description stays on the left
+ * - poster thumbnail stays on the right
+ * - let each poster use its own natural aspect ratio
+ *   so posters like 위닝스런 / 산그좋 do not show
+ *   extra top/bottom whitespace.
  */
 .wf-activities-club {
   grid-template-columns:
@@ -1328,12 +1333,21 @@
     0 !important;
 }
 
+/* 핵심 수정:
+   고정 aspect-ratio를 제거해서 포스터마다
+   원본 비율대로 보이게 함 */
 .wf-activities-club__media
 .wf-responsive-media__frame {
-  width: 100%;
+  width: 100% !important;
 
   aspect-ratio:
-    0.72 !important;
+    auto !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
 
   overflow: hidden;
 
@@ -1351,19 +1365,25 @@
     8px;
 
   background:
-    #f4f7fb;
+    transparent !important;
 }
 
 .wf-activities-club__media
 .wf-responsive-media__image {
-  width: 100%;
-  height: 100%;
+  display:
+    block;
+
+  width:
+    100% !important;
+
+  height:
+    auto !important;
 
   object-fit:
     contain !important;
 
   object-position:
-    center !important;
+    center top !important;
 
   transform:
     none !important;
@@ -1374,7 +1394,6 @@
   display:
     none !important;
 }
-
 
 /* Tablet */
 @media (max-width: 63.99rem) {
@@ -1392,7 +1411,6 @@
       102px !important;
   }
 }
-
 
 /* Phone */
 @media (max-width: 40rem) {
