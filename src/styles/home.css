@@ -15050,8 +15050,8 @@
 /* WF MOBILE HOME INTRO LINEBREAK 2026-08 START */
 
 /*
- * Desktop / large tablet:
- * keep the original two-line editorial copy.
+ * Desktop:
+ * existing two-line copy.
  */
 .wf-home-intro__copy-desktop {
   display:
@@ -15064,11 +15064,20 @@
 }
 
 /*
- * Use the SAME breakpoint as the mobile navigation.
- * This avoids the state where the site is visually in mobile mode
- * but the HOME intro still renders the desktop copy.
+ * Mobile / tablet / touch devices:
+ * force the dedicated four-line copy.
+ *
+ * Expected:
+ * 위닝펀드는 시장을 함께 공부하고,
+ * 각자의 관점을 검증하며
+ * 근거 있는 투자 판단을 만들어가는
+ * 대학 연합투자경제동아리입니다.
  */
-@media (max-width: 59.99rem) {
+@media
+  (max-width: 59.99rem),
+  (hover: none),
+  (pointer: coarse) {
+
   .wf-home-intro__copy-desktop {
     display:
       none !important;
@@ -15084,31 +15093,27 @@
       block !important;
 
     width:
-      max-content;
+      max-content !important;
 
     max-width:
-      none;
+      none !important;
 
     white-space:
       nowrap !important;
   }
 
-  /*
-   * Give the four intentional lines enough horizontal room
-   * without changing the surrounding composition too much.
-   */
   .wf-home-intro__editorial-copy {
     width:
-      88% !important;
+      91% !important;
 
     margin-left:
-      12% !important;
+      9% !important;
 
     font-size:
       clamp(
-        0.91rem,
-        3.7vw,
-        1.08rem
+        0.88rem,
+        3.65vw,
+        1.06rem
       ) !important;
 
     line-height:
@@ -15117,24 +15122,21 @@
 }
 
 /*
- * Extremely narrow phones:
- * preserve the four line groups but reduce type slightly
- * instead of falling back to uncontrolled wrapping.
+ * Very narrow screens only:
+ * slightly reduce type so the intended four lines still fit.
  */
-@media (max-width: 23rem) {
+@media
+  (max-width: 22rem) {
+
   .wf-home-intro__editorial-copy {
     width:
-      92% !important;
+      94% !important;
 
     margin-left:
-      8% !important;
+      6% !important;
 
     font-size:
-      clamp(
-        0.84rem,
-        3.55vw,
-        0.96rem
-      ) !important;
+      0.82rem !important;
   }
 }
 
