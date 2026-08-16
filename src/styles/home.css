@@ -15011,3 +15011,38 @@
 }
 
 /* WF MOBILE HOME FULLSCREEN HERO 2026-08 END */
+
+/* WF MOBILE HOME PROGRAM KICKER HIDE 2026-08 START */
+
+/*
+ * HOME / 주요 활동
+ *
+ * Desktop keeps:
+ * RESEARCH / STUDY / PRACTICE / REPORT
+ *
+ * On phones it competes with the Korean headline and can overlap
+ * "실전으로 연결합니다.", so hide this decorative kicker only
+ * on mobile.
+ */
+@media (max-width: 48rem) {
+  .wf-home-programs__kicker {
+    display:
+      none
+      !important;
+  }
+
+  .wf-home-programs__header {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      )
+      !important;
+
+    gap:
+      0
+      !important;
+  }
+}
+
+/* WF MOBILE HOME PROGRAM KICKER HIDE 2026-08 END */
