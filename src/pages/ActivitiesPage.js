@@ -553,6 +553,14 @@ function SmallGroups({
               null,
               club.description,
             ),
+            club.assetId
+              ? createElement(ActivityMedia, {
+                  assetId: club.assetId,
+                  altText: `${club.officialName} 소모임 포스터`,
+                  caption: club.officialName,
+                  className: 'wf-activities-club__media',
+                })
+              : null,
           ),
         ),
       ),

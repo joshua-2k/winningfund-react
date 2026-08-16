@@ -128,6 +128,10 @@ const requiredAssetIds = [
   'activity-individual-company-report-photo',
   'activity-stock-game-photo',
   'activity-stock-mentoring-photo',
+  'activity-club-jahabugong-poster',
+  'activity-club-winning-hall-meeting-poster',
+  'activity-club-winnings-run-poster',
+  'activity-club-sangeujoah-poster',
 ]
 
 const assetIds = new Set(
@@ -144,7 +148,7 @@ siteContentBundle.assets.every((asset)=>
   !String(asset.src).startsWith('data:') &&
   fs.existsSync(path.join(root,asset.sourcePath))
 )
-  ? pass('17 managed asset refs: 1 brand + 9 members + 7 activities')
+  ? pass('21 managed asset refs: 1 brand + 9 members + 11 activities')
   : fail('asset registry invalid')
 
 const pageDir=path.join(root,'src','pages')

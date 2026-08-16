@@ -1265,3 +1265,51 @@
   scroll-margin-top: clamp(5.5rem, 9vw, 7.5rem);
 }
 /* WF ACTIVITIES DEEP-LINK SCROLL LANDING 2026-08 END */
+
+/* WF ACTIVITIES SMALL GROUP POSTERS V1 START */
+.wf-activities-club {
+  grid-template-rows: auto auto auto auto;
+  align-content: start;
+}
+.wf-activities-club__number {
+  grid-row: 1 / span 4;
+}
+.wf-activities-club__media {
+  grid-column: 2;
+  margin-top: 22px;
+}
+.wf-activities-club__media .wf-responsive-media__frame {
+  aspect-ratio: 0.74 !important;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(29, 64, 115, 0.12);
+  background: #edf3fb;
+  box-shadow: 0 16px 34px rgba(9, 23, 48, 0.08);
+}
+.wf-activities-club__media .wf-responsive-media__image {
+  object-fit: cover;
+  object-position: center top;
+}
+.wf-activities-club__media .wf-responsive-media__caption {
+  margin-top: 12px;
+}
+@media (pointer: fine) and (hover: hover) {
+  .wf-activities-club:hover .wf-activities-club__media .wf-responsive-media__image {
+    transform: scale(1.02);
+  }
+}
+@media (max-width: 63.99rem) {
+  .wf-activities-club__media {
+    grid-column: 2;
+    width: min(100%, 320px);
+  }
+}
+@media (max-width: 40rem) {
+  .wf-activities-club__media {
+    width: 100%;
+  }
+  .wf-activities-club__media .wf-responsive-media__frame {
+    aspect-ratio: 0.73 !important;
+  }
+}
+/* WF ACTIVITIES SMALL GROUP POSTERS V1 END */

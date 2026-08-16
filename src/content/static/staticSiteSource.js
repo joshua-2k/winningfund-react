@@ -3094,6 +3094,7 @@ const source = {
       "sourceStatus": "AUTHORITATIVE"
     }
   ],
+
   "clubs": [
     {
       "clubId": "jahabugong",
@@ -3101,6 +3102,7 @@ const source = {
       "category": "ACADEMIC",
       "categoryLabel": "학술 / 리서치",
       "description": "‘위닝증권 리서치센터’를 지향하며, 관심 기업을 선정하고 투자포인트를 추출해 통합 보고서를 작성합니다. 심층적인 기업 분석과 자신만의 투자포인트를 발견하는 학술 소모임입니다.",
+      "assetId": "activity-club-jahabugong-poster",
       "sourceStatus": "AUTHORITATIVE"
     },
     {
@@ -3109,15 +3111,7 @@ const source = {
       "category": "ACADEMIC",
       "categoryLabel": "학술 / 스피치",
       "description": "산업·기업·매크로 세션으로 나뉘어 최근 발행된 증권사 리포트를 읽고 핵심 내용을 요약해 자유롭게 발표합니다. 리포트 이해도와 발표 역량을 함께 높이는 학술 소모임입니다.",
-      "sourceStatus": "AUTHORITATIVE"
-    },
-    {
-      "clubId": "sangeujoah",
-      "officialName": "산그좋",
-      "category": "SOCIAL",
-      "categoryLabel": "친목 / 등산",
-      "activity": "등산",
-      "description": "함께 산을 오르며 자연스럽게 친목을 다지는 등산 소모임입니다.",
+      "assetId": "activity-club-winning-hall-meeting-poster",
       "sourceStatus": "AUTHORITATIVE"
     },
     {
@@ -3127,9 +3121,21 @@ const source = {
       "categoryLabel": "친목 / 러닝",
       "activity": "러닝",
       "description": "함께 달리며 꾸준히 교류하고 친목을 다지는 러닝 소모임입니다.",
+      "assetId": "activity-club-winnings-run-poster",
+      "sourceStatus": "AUTHORITATIVE"
+    },
+    {
+      "clubId": "sangeujoah",
+      "officialName": "산그좋",
+      "category": "SOCIAL",
+      "categoryLabel": "친목 / 등산",
+      "activity": "등산",
+      "description": "함께 산을 오르며 자연스럽게 친목을 다지는 등산 소모임입니다.",
+      "assetId": "activity-club-sangeujoah-poster",
       "sourceStatus": "AUTHORITATIVE"
     }
   ],
+
   "recruitment": {
     "sourceStatus": "PARTIAL",
     "status": null,
