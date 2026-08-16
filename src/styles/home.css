@@ -14294,3 +14294,24 @@
   }
 }
 /* WF HOME META + MISSION CLEANUP 2026-08 END */
+
+
+/* WF HOME ACTIVITY TITLE-ONLY + SCHEDULE 2026-08 START */
+.wf-home-program__body {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: auto !important;
+  gap: 0 !important;
+}
+
+.wf-home-program__title {
+  max-width: none !important;
+}
+
+.wf-home-program__summary {
+  display: none !important;
+}
+
+.wf-home-semester__eyebrow {
+  letter-spacing: 0.12em;
+}
+/* WF HOME ACTIVITY TITLE-ONLY + SCHEDULE 2026-08 END */

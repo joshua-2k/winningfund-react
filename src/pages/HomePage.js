@@ -770,17 +770,6 @@ function ProgramOverview() {
                   },
                   program.homeLabel,
                 ),
-
-                program.homeSummary
-                  ? createElement(
-                      'span',
-                      {
-                        className:
-                          'wf-home-program__summary',
-                      },
-                      program.homeSummary,
-                    )
-                  : null,
               ),
 
               createElement(
@@ -977,7 +966,7 @@ function SemesterContents() {
             {
               className: 'wf-home-semester__eyebrow',
             },
-            'CONTENTS FOR 18-2',
+            '18-2 CONTENTS',
           ),
 
           createElement(
@@ -985,7 +974,7 @@ function SemesterContents() {
             {
               className: 'wf-home-semester__title',
             },
-            semester.title,
+            '일정',
           ),
         ),
       ),

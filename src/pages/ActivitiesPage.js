@@ -1,7 +1,9 @@
 ﻿import {
   createElement,
+  useEffect,
   useState,
 } from 'react'
+import { useLocation } from 'react-router'
 import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
 import InternalSectionNav from '../components/InternalSectionNav.js'
 import { RouteHeroTitle, RouteHeroWave } from '../components/RouteHeroEffects.js'
@@ -632,6 +634,8 @@ function ActivitiesIntroHeadline({ headline = '' }) {
 }
 
 export default function ActivitiesPage() {
+  const location = useLocation()
+
   const {
     activitiesPage,
     activitySections,
@@ -658,8 +662,37 @@ export default function ActivitiesPage() {
     },
   ]
 
+  const requestedSectionId =
+    decodeURIComponent(
+      location.hash.replace(/^#/, ''),
+    )
+
+  const initialSectionId =
+    navItems.some(
+      (item) =>
+        item.id === requestedSectionId,
+    )
+      ? requestedSectionId
+      : programs[0]?.activityId
+
   const [activeSectionId, setActiveSectionId] =
-    useState(programs[0]?.activityId)
+    useState(initialSectionId)
+
+  useEffect(() => {
+    const hashSectionId =
+      decodeURIComponent(
+        location.hash.replace(/^#/, ''),
+      )
+
+    if (
+      navItems.some(
+        (item) =>
+          item.id === hashSectionId,
+      )
+    ) {
+      setActiveSectionId(hashSectionId)
+    }
+  }, [location.hash])
 
   const activeProgram = programs.find(
     (activity) =>
