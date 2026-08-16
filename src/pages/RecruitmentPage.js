@@ -275,7 +275,13 @@ createElement(
             createElement(
               'div',
               null,
-              createElement('strong', null, periodState.label),
+              periodState.state === 'OPEN'
+                ? null
+                : createElement(
+                    'strong',
+                    null,
+                    periodState.label,
+                  ),
               createElement('span', null, periodState.detail),
             ),
           ),
