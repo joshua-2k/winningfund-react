@@ -33,6 +33,63 @@ function HistoricalMembers({ term }) {
     ),
   )
 }
+
+function TermLabel({ label }) {
+  const rawLabel = String(label ?? '')
+  const separatorIndex = rawLabel.indexOf('-')
+
+  if (separatorIndex < 0) {
+    return createElement(
+      'span',
+      {
+        className: 'wf-members-term-label',
+      },
+      `${rawLabel}기`,
+    )
+  }
+
+  const left =
+    rawLabel.slice(0, separatorIndex)
+
+  const right =
+    rawLabel.slice(separatorIndex + 1)
+
+  return createElement(
+    'span',
+    {
+      className: 'wf-members-term-label',
+      'aria-label': `${rawLabel}기`,
+    },
+    createElement(
+      'span',
+      {
+        className:
+          'wf-members-term-label__number',
+        'aria-hidden': 'true',
+      },
+      left,
+    ),
+    createElement(
+      'span',
+      {
+        className:
+          'wf-members-term-label__hyphen',
+        'aria-hidden': 'true',
+      },
+      '-',
+    ),
+    createElement(
+      'span',
+      {
+        className:
+          'wf-members-term-label__number',
+        'aria-hidden': 'true',
+      },
+      `${right}기`,
+    ),
+  )
+}
+
 export default function MembersPage() {
   const terms = [...membersData.terms].sort(
     (a, b) => a.order - b.order,
@@ -130,7 +187,9 @@ export default function MembersPage() {
                 createElement(
                   'strong',
                   null,
-                  `${current.label}기`,
+                  createElement(TermLabel, {
+                    label: current.label,
+                  }),
                 ),
                 createElement(
                   'span',
@@ -181,7 +240,7 @@ export default function MembersPage() {
             {
               id: 'wf-members-history-title',
             },
-            '기수별 멤버',
+            '역대 임원진',
           ),
         ),
         createElement(Accordion, {
@@ -200,7 +259,9 @@ export default function MembersPage() {
               createElement(
                 'strong',
                 null,
-                `${term.label}기`,
+                createElement(TermLabel, {
+                  label: term.label,
+                }),
               ),
               createElement(
                 'span',

@@ -460,3 +460,23 @@
   }
 }
 /* WF MEMBERS CLEANUP V3 END */
+
+
+/* WF MEMBERS TERM HYPHEN SPACING 2026-08 START */
+.wf-members-term-label {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  letter-spacing: 0 !important;
+}
+
+.wf-members-term-label__hyphen {
+  display: inline-block;
+  margin-inline: 0.13em 0.12em;
+  letter-spacing: 0 !important;
+}
+
+.wf-members-term-label__number {
+  letter-spacing: 0 !important;
+}
+/* WF MEMBERS TERM HYPHEN SPACING 2026-08 END */
