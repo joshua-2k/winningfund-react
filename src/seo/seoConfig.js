@@ -23,7 +23,7 @@ export const SEO_ROUTES = Object.freeze([
     title:
       '위닝펀드 | 대학연합투자동아리 WinningFund',
     description:
-      '위닝펀드(WinningFund)는 대학생이 함께 시장과 기업을 분석하고 투자 아이디어를 검증하는 대학연합투자동아리입니다. 기업분석, 투자 리포트, 주식·투자 스터디와 다양한 활동을 운영합니다.',
+      '위닝펀드는 시장과 기업을 분석하고 투자 아이디어를 검증하는 대학연합투자동아리입니다. 주식·투자 리포트와 학술활동을 운영합니다.',
   }),
 
   Object.freeze({
