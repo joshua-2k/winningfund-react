@@ -67,12 +67,7 @@ export function validateSiteContentBundle(bundle) {
     if (term.dataStatus === MEMBER_DATA_STATUS.KNOWN_EMPTY && !term.knownEmptyEvidence) {
       errors.push(`KNOWN_EMPTY requires evidence: ${term.termId}`)
     }
-
-    const generation = Number(String(term.termId).split('-')[0])
-    if (generation < 9 && (term.members?.length ?? 0) > 0) {
-      errors.push(`Pre-9 fabricated member records prohibited: ${term.termId}`)
-    }
-  }
+}
 
   if (!termIds.has(bundle?.siteConfig?.currentTermId)) {
     errors.push('currentTermId does not resolve.')

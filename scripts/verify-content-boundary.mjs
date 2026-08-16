@@ -56,10 +56,22 @@ members.currentTermId==='18-2' && current?.members?.length===9
   ? pass('18-2 current term + 9 verified members preserved')
   : fail('18-2 current member baseline invalid')
 
-const pre9=members.terms.filter((x)=>Number(x.termId.split('-')[0])<9)
-pre9.every((x)=>x.dataStatus==='UNAVAILABLE' && x.members.length===0)
-  ? pass('pre-9 terms remain UNAVAILABLE with no fabricated members')
-  : fail('pre-9 historical integrity violated')
+const expectedTermIds = [
+  '18-2','18-1','17-2','17-1','16-2','16-1','15-2','15-1',
+  '14-2','14-1','13-2','13-1','12-2','12-1','11-2','11-1',
+  '10-2','10-1','9-2','9-1','8-2','8-1','7-2','7-1',
+  '6-2','6-1','5-2','5-1','4-2','4-1','3-2','3-1',
+  '2-2','2-1','1-2','1-1',
+]
+members.terms.length===expectedTermIds.length &&
+members.terms.every((x)=>x.dataStatus==='AVAILABLE' && x.members.length>0) &&
+members.terms
+  .slice()
+  .sort((a,b)=>a.order-b.order)
+  .map((x)=>x.termId)
+  .join('|')===expectedTermIds.join('|')
+  ? pass('complete 1-1 through 18-2 member history preserved')
+  : fail('complete member history baseline invalid')
 
 const activities=selectActivitiesPageData(siteContentBundle)
 activities.activitySections.map((x)=>x.activityId).join('|')===canonical.join('|')

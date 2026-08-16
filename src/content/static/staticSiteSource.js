@@ -429,7 +429,8 @@ const source = {
           "photoAssetId": "member-18-2-09-photo",
           "sourceStatus": "AUTHORITATIVE"
         }
-      ]
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "18-1",
@@ -441,51 +442,61 @@ const source = {
         {
           "memberId": "18-1-member-01",
           "name": "성인제",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-02",
           "name": "박지민",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-03",
-          "name": "강나연",
+          "name": "박지영",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-04",
-          "name": "김호준",
+          "name": "강나연",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-05",
-          "name": "공나영",
+          "name": "오성아",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-06",
           "name": "박서준",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-07",
-          "name": "박지영",
+          "name": "김호준",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-08",
-          "name": "이다현",
+          "name": "이규정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-09",
-          "name": "이규정",
+          "name": "공나영",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "18-1-member-10",
-          "name": "오성아",
+          "name": "이다현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -501,41 +512,49 @@ const source = {
         {
           "memberId": "17-2-member-01",
           "name": "김민찬",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-02",
-          "name": "공규식",
+          "name": "최윤호",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-03",
-          "name": "김진혁",
+          "name": "김호준",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-04",
-          "name": "김호준",
+          "name": "김진혁",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-05",
-          "name": "마시은",
+          "name": "성인제",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-06",
-          "name": "성인제",
+          "name": "공규식",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-07",
-          "name": "이선웅",
+          "name": "마시은",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-2-member-08",
-          "name": "최윤호",
+          "name": "이선웅",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -551,46 +570,55 @@ const source = {
         {
           "memberId": "17-1-member-01",
           "name": "김민찬",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-02",
-          "name": "김나예",
+          "name": "김도현(00)",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-03",
-          "name": "김도현(98)",
+          "name": "임지윤",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-04",
-          "name": "김도현(00)",
+          "name": "김도현(98)",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-05",
           "name": "김도현(01)",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-06",
-          "name": "안서령",
+          "name": "김나예",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-07",
-          "name": "임지윤",
+          "name": "안서령",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-08",
           "name": "정승은",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "17-1-member-09",
           "name": "황서영",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -606,46 +634,55 @@ const source = {
         {
           "memberId": "16-2-member-01",
           "name": "오사랑",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-02",
           "name": "손효정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-03",
-          "name": "김정현",
+          "name": "최인서",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-04",
-          "name": "김민찬",
+          "name": "김정현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-05",
-          "name": "김도현",
+          "name": "김민찬",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-06",
-          "name": "박평수",
+          "name": "김태욱",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-07",
-          "name": "최인서",
+          "name": "김도현",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-08",
-          "name": "김태욱",
+          "name": "강지영",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-2-member-09",
-          "name": "강지영",
+          "name": "박평수",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -661,46 +698,55 @@ const source = {
         {
           "memberId": "16-1-member-01",
           "name": "서재혁",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-02",
-          "name": "강지영",
+          "name": "손효정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-03",
-          "name": "이서현",
+          "name": "오사랑",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-04",
-          "name": "천근희",
+          "name": "황의민",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-05",
-          "name": "김태욱",
+          "name": "최시은",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-06",
-          "name": "황의민",
+          "name": "천근희",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-07",
-          "name": "최시은",
+          "name": "김태욱",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-08",
-          "name": "손효정",
+          "name": "강지영",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "16-1-member-09",
-          "name": "오사랑",
+          "name": "이서현",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -716,46 +762,55 @@ const source = {
         {
           "memberId": "15-2-member-01",
           "name": "서재혁",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-02",
           "name": "남정빈",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-03",
           "name": "최은교",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-04",
-          "name": "박성진",
+          "name": "김수빈",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-05",
-          "name": "이예림",
+          "name": "성준규",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-06",
-          "name": "김정민",
+          "name": "조현규",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-07",
-          "name": "김수빈",
+          "name": "박성진",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-08",
-          "name": "성준규",
+          "name": "이예림",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-2-member-09",
-          "name": "조현규",
+          "name": "김정민",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -771,46 +826,55 @@ const source = {
         {
           "memberId": "15-1-member-01",
           "name": "강동민",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-02",
           "name": "심혜림",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-03",
-          "name": "남정빈",
+          "name": "유동연",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-04",
-          "name": "박성진",
+          "name": "김수빈",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-05",
-          "name": "유동연",
+          "name": "서재혁",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-06",
-          "name": "서재혁",
+          "name": "남정빈",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-07",
-          "name": "심우승",
+          "name": "박성진",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-08",
-          "name": "김수빈",
+          "name": "심우승",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "15-1-member-09",
           "name": "이경태",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -826,46 +890,49 @@ const source = {
         {
           "memberId": "14-2-member-01",
           "name": "이동휘",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-02",
           "name": "심혜림",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-03",
           "name": "김태형",
+          "role": "기획/교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-04",
-          "name": "강동민",
+          "name": "서정민",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-05",
-          "name": "금동길",
+          "name": "김지연",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-06",
-          "name": "김지연",
+          "name": "강동민",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-07",
           "name": "이상혁",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-2-member-08",
           "name": "남정빈",
-          "sourceStatus": "AUTHORITATIVE"
-        },
-        {
-          "memberId": "14-2-member-09",
-          "name": "서정민",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -881,46 +948,55 @@ const source = {
         {
           "memberId": "14-1-member-01",
           "name": "이혜규",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-02",
           "name": "김가희",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-03",
-          "name": "이장미",
+          "name": "조혜온",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-04",
-          "name": "배가현",
+          "name": "김지훈",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-05",
-          "name": "박민호",
+          "name": "이동휘",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-06",
-          "name": "이동휘",
+          "name": "심혜림",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-07",
-          "name": "심혜림",
+          "name": "박민호",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-08",
-          "name": "조혜온",
+          "name": "배가현",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "14-1-member-09",
-          "name": "김지훈",
+          "name": "이장미",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -931,10 +1007,76 @@ const source = {
       "label": "13-2",
       "order": 11,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "13-2-member-01",
+          "name": "김영우",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-02",
+          "name": "이혜규",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-03",
+          "name": "김민정",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-04",
+          "name": "공이주",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-05",
+          "name": "조은주",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-06",
+          "name": "이장미",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-07",
+          "name": "정재은",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-08",
+          "name": "김주빈",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-09",
+          "name": "연규진",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-10",
+          "name": "김가희",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "13-2-member-11",
+          "name": "김슬기",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "13-1",
@@ -946,56 +1088,67 @@ const source = {
         {
           "memberId": "13-1-member-01",
           "name": "임성원",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-02",
           "name": "서지은",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-03",
-          "name": "김나현",
+          "name": "조부현",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-04",
-          "name": "김민정",
+          "name": "김가희",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-05",
-          "name": "고소영",
+          "name": "김태현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-06",
-          "name": "김태현",
+          "name": "김민정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-07",
-          "name": "김영우",
+          "name": "김나현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-08",
-          "name": "김재돈",
+          "name": "고소영",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-09",
-          "name": "김가희",
+          "name": "김재돈",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-10",
-          "name": "조부현",
+          "name": "김영우",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "13-1-member-11",
           "name": "이혜규",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1011,51 +1164,49 @@ const source = {
         {
           "memberId": "12-2-member-01",
           "name": "우용안",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-02",
           "name": "김수현",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-03",
           "name": "윤승민",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-04",
-          "name": "곽하빈",
+          "name": "서지은",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-05",
-          "name": "장진영",
+          "name": "김나현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-06",
-          "name": "유소정",
+          "name": "임성원",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-07",
-          "name": "서지은",
+          "name": "곽하빈",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-2-member-08",
-          "name": "이예진",
-          "sourceStatus": "AUTHORITATIVE"
-        },
-        {
-          "memberId": "12-2-member-09",
-          "name": "김나현",
-          "sourceStatus": "AUTHORITATIVE"
-        },
-        {
-          "memberId": "12-2-member-10",
-          "name": "임성원",
+          "name": "유소정",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1071,46 +1222,61 @@ const source = {
         {
           "memberId": "12-1-member-01",
           "name": "우용안",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-02",
-          "name": "윤승민",
+          "name": "김수현",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-03",
-          "name": "곽하빈",
+          "name": "윤승민",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-04",
-          "name": "장진영",
+          "name": "유소정",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-05",
-          "name": "유소정",
+          "name": "장진영",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-06",
-          "name": "서지은",
+          "name": "곽하빈",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-07",
-          "name": "이예진",
+          "name": "김나현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-08",
-          "name": "김나현",
+          "name": "서지은",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "12-1-member-09",
           "name": "임성원",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "12-1-member-10",
+          "name": "이예진",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1121,10 +1287,82 @@ const source = {
       "label": "11-2",
       "order": 15,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "11-2-member-01",
+          "name": "윤승민",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-02",
+          "name": "김누리",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-03",
+          "name": "원호연",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-04",
+          "name": "조남헌",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-05",
+          "name": "최길호",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-06",
+          "name": "윤나연",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-07",
+          "name": "이아리",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-08",
+          "name": "우가연",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-09",
+          "name": "장원진",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-10",
+          "name": "우용안",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-11",
+          "name": "조하윤",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-2-member-12",
+          "name": "김수현",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "11-1",
@@ -1135,62 +1373,80 @@ const source = {
       "members": [
         {
           "memberId": "11-1-member-01",
-          "name": "윤승민",
+          "name": "조남헌",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-02",
-          "name": "김누리",
+          "name": "김도연",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-03",
-          "name": "조남헌",
+          "name": "한윤",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-04",
-          "name": "원호연",
+          "name": "윤승민",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-05",
-          "name": "최길호",
+          "name": "홍성희",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-06",
-          "name": "우가연",
+          "name": "이광호",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-07",
-          "name": "장원진",
+          "name": "김누리",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-08",
-          "name": "이아리",
+          "name": "우가연",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-09",
-          "name": "윤나연",
+          "name": "최길호",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-10",
-          "name": "김수현",
+          "name": "원호연",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-11",
-          "name": "우용안",
+          "name": "주용석",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "11-1-member-12",
-          "name": "조하윤",
+          "name": "강유리",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "11-1-member-13",
+          "name": "김민지",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1206,56 +1462,67 @@ const source = {
         {
           "memberId": "10-2-member-01",
           "name": "오승현",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-02",
-          "name": "문혜준",
+          "name": "박경언",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-03",
-          "name": "박경언",
+          "name": "한윤",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-04",
           "name": "강연수",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-05",
-          "name": "조남헌",
+          "name": "강승미",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-06",
-          "name": "이채린",
+          "name": "조남헌",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-07",
-          "name": "한윤",
+          "name": "김도연",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-08",
-          "name": "강승미",
+          "name": "류나경",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-09",
-          "name": "김도연",
+          "name": "이채린",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-10",
-          "name": "류나경",
+          "name": "문혜준",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-2-member-11",
           "name": "홍성희",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1271,56 +1538,67 @@ const source = {
         {
           "memberId": "10-1-member-01",
           "name": "공재민",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-02",
-          "name": "박경언",
+          "name": "강승미",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-03",
-          "name": "강승미",
+          "name": "박경언",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-04",
-          "name": "고수희",
+          "name": "장유성",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-05",
-          "name": "남경준",
+          "name": "조남헌",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-06",
-          "name": "류나경",
+          "name": "남경준",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-07",
           "name": "김도연",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-08",
           "name": "오승현",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-09",
-          "name": "조남헌",
+          "name": "류나경",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-10",
-          "name": "이채린",
+          "name": "고수희",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "10-1-member-11",
-          "name": "장유성",
+          "name": "이채린",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1336,61 +1614,73 @@ const source = {
         {
           "memberId": "9-2-member-01",
           "name": "강연수",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-02",
           "name": "육지연",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-03",
-          "name": "강호열",
+          "name": "장연수",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-04",
-          "name": "고수희",
+          "name": "공재민",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-05",
-          "name": "김예지",
+          "name": "허진석",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-06",
-          "name": "공재민",
+          "name": "강승미",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-07",
-          "name": "김효정",
+          "name": "강호열",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-08",
-          "name": "최진원",
+          "name": "김예지",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-09",
-          "name": "김헌영",
+          "name": "최진원",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-10",
-          "name": "장유성",
+          "name": "김효정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-11",
-          "name": "강승미",
+          "name": "김헌영",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-2-member-12",
-          "name": "허진석",
+          "name": "고수희",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1405,57 +1695,68 @@ const source = {
       "members": [
         {
           "memberId": "9-1-member-01",
-          "name": "강연수",
+          "name": "이숙희",
+          "role": "회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-02",
-          "name": "강호열",
+          "name": "강민정",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-03",
           "name": "박훈민",
+          "role": "부회장",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-04",
-          "name": "강민정",
+          "name": "장유성",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-05",
           "name": "공재민",
+          "role": "교육임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-06",
           "name": "육지연",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-07",
-          "name": "허진석",
+          "name": "강호열",
+          "role": "인사임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-08",
-          "name": "김헌영",
+          "name": "허진석",
+          "role": "회계임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-09",
-          "name": "김효정",
+          "name": "김헌영",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-10",
-          "name": "이숙희",
+          "name": "김효정",
+          "role": "기획임원",
           "sourceStatus": "AUTHORITATIVE"
         },
         {
           "memberId": "9-1-member-11",
-          "name": "장유성",
+          "name": "강연수",
+          "role": "서기",
           "sourceStatus": "AUTHORITATIVE"
         }
       ],
@@ -1466,160 +1767,1080 @@ const source = {
       "label": "8-2",
       "order": 21,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "8-2-member-01",
+          "name": "강호열",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-02",
+          "name": "이숙희",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-03",
+          "name": "김종태",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-04",
+          "name": "오경식",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-05",
+          "name": "김원주",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-06",
+          "name": "강민정",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-07",
+          "name": "박훈민",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-08",
+          "name": "허진석",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-09",
+          "name": "윤유정",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-10",
+          "name": "강연수",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-2-member-11",
+          "name": "윤경민",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "8-1",
       "label": "8-1",
       "order": 22,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "8-1-member-01",
+          "name": "김종태",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-02",
+          "name": "배인희",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-03",
+          "name": "양원석",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-04",
+          "name": "강동주",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-05",
+          "name": "오경식",
+          "role": "교육임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-06",
+          "name": "강호열",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-07",
+          "name": "이숙희",
+          "role": "기획임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-08",
+          "name": "곽동우",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-09",
+          "name": "이윤성",
+          "role": "회계임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-10",
+          "name": "박선영",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-11",
+          "name": "윤경민",
+          "role": "인사임원",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "8-1-member-12",
+          "name": "윤유정",
+          "role": "서기",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "7-2",
       "label": "7-2",
       "order": 23,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "7-2-member-01",
+          "name": "안상기",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-02",
+          "name": "신곤주",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-03",
+          "name": "양원석",
+          "role": "교육담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-04",
+          "name": "강동주",
+          "role": "교육담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-05",
+          "name": "정민근",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-06",
+          "name": "배인희",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-07",
+          "name": "김종태",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-2-member-08",
+          "name": "곽동우",
+          "role": "회계담당",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "7-1",
       "label": "7-1",
       "order": 24,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "7-1-member-01",
+          "name": "이정현",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-02",
+          "name": "윤종원",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-03",
+          "name": "서민우",
+          "role": "교육담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-04",
+          "name": "허이윤",
+          "role": "교육담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-05",
+          "name": "강창민",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-06",
+          "name": "최하림",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-07",
+          "name": "안상기",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-08",
+          "name": "서우택",
+          "role": "촬영담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-09",
+          "name": "신곤주",
+          "role": "회계담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "7-1-member-10",
+          "name": "배영은",
+          "role": "서기",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "6-2",
       "label": "6-2",
       "order": 25,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "6-2-member-01",
+          "name": "이병준",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-02",
+          "name": "진수영",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-03",
+          "name": "서민우",
+          "role": "교육담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-04",
+          "name": "배영은",
+          "role": "회계담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-05",
+          "name": "윤종원",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-06",
+          "name": "이정현",
+          "role": "기획,홍보 담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-07",
+          "name": "최하림",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-2-member-08",
+          "name": "서우택",
+          "role": "촬영담당",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "6-1",
       "label": "6-1",
       "order": 26,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "6-1-member-01",
+          "name": "민유지",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-02",
+          "name": "안영지",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-03",
+          "name": "김수빈",
+          "role": "부회장,서기",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-04",
+          "name": "윤가희",
+          "role": "회계담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-05",
+          "name": "이병준",
+          "role": "기획,홍보",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-06",
+          "name": "박수련",
+          "role": "기획,홍보",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "6-1-member-07",
+          "name": "진수영",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "5-2",
       "label": "5-2",
       "order": 27,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "5-2-member-01",
+          "name": "신주연",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-02",
+          "name": "이성진",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-03",
+          "name": "김수빈",
+          "role": "회계,서기",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-04",
+          "name": "민유지",
+          "role": "기획담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-05",
+          "name": "김주연",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-06",
+          "name": "안영지",
+          "role": "편집담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-2-member-07",
+          "name": "김건태",
+          "role": "홍보,웹디담당",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "5-1",
       "label": "5-1",
       "order": 28,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "5-1-member-01",
+          "name": "신주연",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-02",
+          "name": "박현이",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-03",
+          "name": "강지혜",
+          "role": "회계, 강의담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-04",
+          "name": "배민혜",
+          "role": "기획담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-05",
+          "name": "이진수",
+          "role": "기획담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-06",
+          "name": "조용주",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-07",
+          "name": "이성진",
+          "role": "인사담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-08",
+          "name": "민유지",
+          "role": "서기",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-09",
+          "name": "김주연",
+          "role": "편집담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-10",
+          "name": "강혜승",
+          "role": "홍보담당",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "5-1-member-11",
+          "name": "최규성",
+          "role": "홍보담당",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "4-2",
       "label": "4-2",
       "order": 29,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "4-2-member-01",
+          "name": "황보예빈",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-02",
+          "name": "이제환",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-03",
+          "name": "강지혜",
+          "role": "회계부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-04",
+          "name": "배민혜",
+          "role": "기록부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-05",
+          "name": "박현이",
+          "role": "인사부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-06",
+          "name": "권순호",
+          "role": "학술부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-07",
+          "name": "강혜승",
+          "role": "홍보부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-08",
+          "name": "권여은",
+          "role": "기획부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-09",
+          "name": "유동한",
+          "role": "섭외부장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-2-member-10",
+          "name": "신주연",
+          "role": "편집부장",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "4-1",
       "label": "4-1",
       "order": 30,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "4-1-member-01",
+          "name": "황보예빈",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-02",
+          "name": "이제환",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-03",
+          "name": "성은아",
+          "role": "회계",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-04",
+          "name": "송연주",
+          "role": "문화기획국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-05",
+          "name": "이길호",
+          "role": "대외협력국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-06",
+          "name": "강혜승",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-07",
+          "name": "권순호",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-08",
+          "name": "이종욱",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-09",
+          "name": "박현이",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "4-1-member-10",
+          "name": "이장중",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "3-2",
       "label": "3-2",
       "order": 31,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "3-2-member-01",
+          "name": "나승현",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-02",
+          "name": "이광재",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-03",
+          "name": "황보예빈",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-04",
+          "name": "강은빈",
+          "role": "회계",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-05",
+          "name": "이유나",
+          "role": "문화기획국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-06",
+          "name": "권은지",
+          "role": "대외협력국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-07",
+          "name": "한승협",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-08",
+          "name": "이제환",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-09",
+          "name": "안상기",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-2-member-10",
+          "name": "신광일",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "3-1",
       "label": "3-1",
       "order": 32,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "3-1-member-01",
+          "name": "나승현",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-02",
+          "name": "이광재",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-03",
+          "name": "황보예빈",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-04",
+          "name": "강은빈",
+          "role": "회계",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-05",
+          "name": "이유나",
+          "role": "문화기획국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-06",
+          "name": "권은지",
+          "role": "대외협력국장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-07",
+          "name": "한승협",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-08",
+          "name": "김태준",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "3-1-member-09",
+          "name": "신광일",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "2-2",
       "label": "2-2",
       "order": 33,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "2-2-member-01",
+          "name": "곽승",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-02",
+          "name": "차혜진",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-03",
+          "name": "황보예빈",
+          "role": "회계",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-04",
+          "name": "한아름",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-05",
+          "name": "나승현",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-06",
+          "name": "김혜란",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-07",
+          "name": "권은지",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-2-member-08",
+          "name": "이광재",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "2-1",
       "label": "2-1",
       "order": 34,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "2-1-member-01",
+          "name": "곽승",
+          "role": "회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-02",
+          "name": "김진수",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-03",
+          "name": "차혜진",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-04",
+          "name": "이소정",
+          "role": "회계",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-05",
+          "name": "한아름",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-06",
+          "name": "곽난령",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-07",
+          "name": "송종욱",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-08",
+          "name": "이민경",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "2-1-member-09",
+          "name": "김혜란",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "1-2",
       "label": "1-2",
       "order": 35,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "1-2-member-01",
+          "name": "곽승",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-02",
+          "name": "차혜진",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-03",
+          "name": "한아름",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-04",
+          "name": "김혜진",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-05",
+          "name": "윤지연",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-06",
+          "name": "이정현",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-07",
+          "name": "김윤수",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-08",
+          "name": "오승권",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-09",
+          "name": "이승룡",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-10",
+          "name": "김진수",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-11",
+          "name": "이은정",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-12",
+          "name": "이종욱",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-13",
+          "name": "강대현",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-14",
+          "name": "이선",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-2-member-15",
+          "name": "장조은",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     },
     {
       "termId": "1-1",
       "label": "1-1",
       "order": 36,
       "cohortStatus": "HISTORICAL",
-      "dataStatus": "UNAVAILABLE",
-      "members": [],
-      "sourceStatus": "UNAVAILABLE",
-      "sourceNote": "source-row-retained-records-not-imported"
+      "dataStatus": "AVAILABLE",
+      "members": [
+        {
+          "memberId": "1-1-member-01",
+          "name": "곽승",
+          "role": "부회장",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-02",
+          "name": "이종욱",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-03",
+          "name": "박은아",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-04",
+          "name": "김석현",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-05",
+          "name": "이정현",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-06",
+          "name": "오승권",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-07",
+          "name": "김윤수",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-08",
+          "name": "이승룡",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-09",
+          "name": "한아름",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-10",
+          "name": "김혜진",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-11",
+          "name": "차혜진",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-12",
+          "name": "윤지연",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-13",
+          "name": "심혜영",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-14",
+          "name": "박채연",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-15",
+          "name": "김재하",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-16",
+          "name": "박성우",
+          "sourceStatus": "AUTHORITATIVE"
+        },
+        {
+          "memberId": "1-1-member-17",
+          "name": "송아름",
+          "sourceStatus": "AUTHORITATIVE"
+        }
+      ],
+      "sourceStatus": "AUTHORITATIVE"
     }
   ],
 "activitiesPage": {
