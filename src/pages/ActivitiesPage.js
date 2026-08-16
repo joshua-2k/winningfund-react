@@ -74,13 +74,13 @@ function ProgramHeading({ activity }) {
         ? {
             className:
               'wf-activities-program__title wf-activities-program__title--classes',
-            'aria-label':
-              '분반강의 (입문반 · 실전반)',
+            'aria-label': '분반강의',
           }
         : {
             className:
               'wf-activities-program__title',
           },
+
       isClasses
         ? createElement(
             'span',
@@ -91,16 +91,6 @@ function ProgramHeading({ activity }) {
             '분반강의',
           )
         : activity.pageTitle ?? activity.title,
-      isClasses
-        ? createElement(
-            'span',
-            {
-              className:
-                'wf-activities-program__title-line',
-            },
-            '(입문반 · 실전반)',
-          )
-        : null,
     ),
 
     createElement(
@@ -110,6 +100,7 @@ function ProgramHeading({ activity }) {
     ),
   )
 }
+
 function SectorProgram({ activity }) {
   return createElement(
     'div',
