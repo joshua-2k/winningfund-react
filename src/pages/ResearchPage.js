@@ -1,13 +1,140 @@
-import { createElement } from 'react'
+﻿import { createElement } from 'react'
 import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import { RouteHeroTitle } from '../components/RouteHeroEffects.js'
 
-const archiveTags = Object.freeze([
-  'COMPANY ANALYSIS',
-  'INVESTMENT STRATEGY',
-  'TEAM REPORT',
-  'INDIVIDUAL REPORT',
+/*
+ * Add the two Naver Cafe archive board URLs here later.
+ * Leave an empty string until each board is ready.
+ */
+const researchArchiveLinks = Object.freeze({
+  individual: '',
+  team: '',
+})
+
+const archiveGroups = Object.freeze([
+  {
+    id: 'individual',
+    index: '01',
+    label: 'INDIVIDUAL REPORT',
+    title: '개인 리포트',
+    description:
+      '역대 위닝펀드 회원들이 작성한 우수 개인 리포트를 모아둔 네이버 카페 아카이브입니다.',
+  },
+  {
+    id: 'team',
+    index: '02',
+    label: 'TEAM REPORT',
+    title: '팀 리포트',
+    description:
+      '역대 위닝펀드 팀 활동을 통해 작성된 우수 팀 리포트를 모아둔 네이버 카페 아카이브입니다.',
+  },
 ])
+
+function isReadyUrl(value) {
+  return /^https?:\/\//i.test(
+    String(value ?? '').trim(),
+  )
+}
+
+function ArchiveGateway({
+  group,
+}) {
+  const url =
+    researchArchiveLinks[group.id]
+
+  const content =
+    createElement(
+      'div',
+      {
+        className:
+          'wf-research-gateway__content',
+      },
+      createElement(
+        'div',
+        {
+          className:
+            'wf-research-gateway__meta',
+        },
+        createElement(
+          'span',
+          {
+            className:
+              'wf-research-gateway__index',
+          },
+          group.index,
+        ),
+        createElement(
+          'span',
+          {
+            className:
+              'wf-research-gateway__label',
+          },
+          group.label,
+        ),
+      ),
+      createElement(
+        'h3',
+        null,
+        group.title,
+      ),
+      createElement(
+        'p',
+        {
+          className:
+            'wf-research-gateway__description',
+        },
+        group.description,
+      ),
+    )
+
+  if (isReadyUrl(url)) {
+    return createElement(
+      'a',
+      {
+        className:
+          'wf-research-gateway wf-research-gateway--ready',
+        href: url,
+        target: '_blank',
+        rel: 'noreferrer',
+      },
+      content,
+      createElement(
+        'span',
+        {
+          className:
+            'wf-research-gateway__action',
+          'aria-hidden': 'true',
+        },
+        '카페에서 보기',
+        createElement(
+          'span',
+          {
+            className:
+              'wf-research-gateway__arrow',
+          },
+          '↗',
+        ),
+      ),
+    )
+  }
+
+  return createElement(
+    'article',
+    {
+      className:
+        'wf-research-gateway wf-research-gateway--pending',
+    },
+    content,
+    createElement(
+      'span',
+      {
+        className:
+          'wf-research-gateway__action',
+      },
+      '카페 링크 준비 중',
+    ),
+  )
+}
 
 export default function ResearchPage() {
   return createElement(
@@ -15,57 +142,73 @@ export default function ResearchPage() {
     {
       className: 'wf-research',
     },
-    createElement(RouteResearchBookScroll, {
-      rootSelector: '.wf-research',
-      sections: [
+
+    createElement(
+      RouteResearchBookScroll,
       {
-        selector: '.wf-research-hero',
-        label: 'RESEARCH',
+        rootSelector: '.wf-research',
+        sections: [
+          {
+            selector:
+              '.wf-research-hero',
+            label: 'RESEARCH',
+          },
+          {
+            selector:
+              '.wf-research-archive',
+            label: 'ARCHIVE',
+          },
+        ],
       },
-      {
-        selector: '.wf-research-archive',
-        label: 'ARCHIVE',
-      },
-      ],
-    }),
-createElement(
+    ),
+
+    createElement(
       'section',
       {
         className: 'wf-research-hero',
-        'aria-labelledby': 'wf-research-title',
+        'aria-labelledby':
+          'wf-research-title',
       },
       createElement(
         'div',
         {
-          className: 'wf-research-hero__inner',
+          className:
+            'wf-research-hero__inner',
         },
         createElement(
           'p',
           {
-            className: 'wf-research-hero__eyebrow',
+            className:
+              'wf-research-hero__eyebrow',
           },
           'WINNINGFUND RESEARCH',
         ),
-        createElement(RouteHeroTitle, {
-          id: 'wf-research-title',
-          className: 'wf-research-hero__title',
-          title: 'RESEARCH',
-        }),
+        createElement(
+          RouteHeroTitle,
+          {
+            id: 'wf-research-title',
+            className:
+              'wf-research-hero__title',
+            title: 'RESEARCH',
+          },
+        ),
         createElement(
           'div',
           {
-            className: 'wf-research-hero__taxonomy',
-            'aria-label': 'Research categories',
+            className:
+              'wf-research-hero__taxonomy',
+            'aria-label':
+              'Research archive types',
           },
           createElement(
             'span',
             null,
-            'COMPANY ANALYSIS',
+            'INDIVIDUAL REPORT',
           ),
           createElement(
             'span',
             null,
-            'INVESTMENT STRATEGY',
+            'TEAM REPORT',
           ),
         ),
       ),
@@ -74,100 +217,67 @@ createElement(
     createElement(
       'section',
       {
-        className: 'wf-research-archive',
-        'aria-labelledby': 'wf-research-archive-title',
+        className:
+          'wf-research-archive',
+        'aria-labelledby':
+          'wf-research-archive-title',
       },
       createElement(
         'div',
         {
-          className: 'wf-research-section__inner',
+          className:
+            'wf-research-section__inner',
         },
+
         createElement(
           'header',
           {
-            className: 'wf-research-archive__header',
+            className:
+              'wf-research-archive__header',
           },
           createElement(
             'p',
             {
-              className: 'wf-research-archive__eyebrow',
+              className:
+                'wf-research-archive__eyebrow',
             },
             'SELECTED REPORTS',
           ),
           createElement(
             'h2',
             {
-              id: 'wf-research-archive-title',
+              id:
+                'wf-research-archive-title',
             },
             '우수 리포트 아카이브',
           ),
           createElement(
             'p',
             {
-              className: 'wf-research-archive__copy',
+              className:
+                'wf-research-archive__copy',
             },
-            '기업분석과 투자전략 활동을 통해 작성된 리포트 중 우수 리포트를 선정하여 공개합니다.',
+            '역대 위닝펀드 활동에서 선정된 우수 리포트를 개인 리포트와 팀 리포트로 나누어 소개합니다.',
           ),
         ),
 
         createElement(
-          'article',
+          'div',
           {
-            className: 'wf-research-coming-soon',
+            className:
+              'wf-research-gateway-list',
+            'aria-label':
+              '우수 리포트 카페 아카이브',
           },
-          createElement(
-            'div',
-            {
-              className: 'wf-research-coming-soon__meta',
-            },
-            createElement(
-              'span',
-              null,
-              'ARCHIVE STATUS',
-            ),
-            createElement(
-              'strong',
-              null,
-              'COMING SOON',
-            ),
-          ),
-          createElement(
-            'div',
-            {
-              className: 'wf-research-coming-soon__body',
-            },
-            createElement(
-              'p',
-              {
-                className: 'wf-research-coming-soon__kicker',
-              },
-              'CURATED RESEARCH',
-            ),
-            createElement(
-              'h3',
-              null,
-              '리포트 선정 후 순차적으로 공개됩니다.',
-            ),
-            createElement(
-              'p',
-              null,
-              '우수 리포트 선정이 완료되면 기업분석 및 투자전략 리포트를 이곳에서 소개하고, 각 리포트는 위닝펀드 네이버 카페의 해당 게시글로 연결할 예정입니다.',
-            ),
-          ),
-          createElement(
-            'div',
-            {
-              className: 'wf-research-coming-soon__tags',
-            },
-            ...archiveTags.map((tag) =>
+          ...archiveGroups.map(
+            (group) =>
               createElement(
-                'span',
+                ArchiveGateway,
                 {
-                  key: tag,
+                  key: group.id,
+                  group,
                 },
-                tag,
               ),
-            ),
           ),
         ),
       ),
