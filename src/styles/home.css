@@ -14315,3 +14315,17 @@
   letter-spacing: 0.12em;
 }
 /* WF HOME ACTIVITY TITLE-ONLY + SCHEDULE 2026-08 END */
+
+/* WF HOME HERO NO HORIZONTAL LINES 2026-08 START */
+.wf-home-hero .wf-home-kinetic-list {
+  border-top: 0 !important;
+}
+
+.wf-home-hero .wf-home-kinetic-row {
+  border-bottom: 0 !important;
+}
+
+.wf-home-hero .wf-home-kinetic-footer__divider {
+  display: none !important;
+}
+/* WF HOME HERO NO HORIZONTAL LINES 2026-08 END */
