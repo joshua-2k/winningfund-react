@@ -15049,58 +15049,92 @@
 
 /* WF MOBILE HOME INTRO LINEBREAK 2026-08 START */
 
-/* Desktop keeps the existing two-line editorial copy. */
+/*
+ * Desktop / large tablet:
+ * keep the original two-line editorial copy.
+ */
 .wf-home-intro__copy-desktop {
   display:
-    inline;
+    inline !important;
 }
 
 .wf-home-intro__copy-mobile {
   display:
-    none;
+    none !important;
 }
 
 /*
- * Mobile uses four intentional lines so no short fragment such as
- * "검증하며" is left alone by automatic wrapping.
+ * Use the SAME breakpoint as the mobile navigation.
+ * This avoids the state where the site is visually in mobile mode
+ * but the HOME intro still renders the desktop copy.
  */
-@media (max-width: 48rem) {
+@media (max-width: 59.99rem) {
   .wf-home-intro__copy-desktop {
     display:
-      none;
+      none !important;
   }
 
   .wf-home-intro__copy-mobile {
     display:
-      block;
+      block !important;
   }
 
   .wf-home-intro__copy-mobile-line {
     display:
-      block;
+      block !important;
 
     width:
-      fit-content;
+      max-content;
 
     max-width:
-      100%;
+      none;
 
     white-space:
-      nowrap;
+      nowrap !important;
+  }
+
+  /*
+   * Give the four intentional lines enough horizontal room
+   * without changing the surrounding composition too much.
+   */
+  .wf-home-intro__editorial-copy {
+    width:
+      88% !important;
+
+    margin-left:
+      12% !important;
+
+    font-size:
+      clamp(
+        0.91rem,
+        3.7vw,
+        1.08rem
+      ) !important;
+
+    line-height:
+      1.72 !important;
   }
 }
 
 /*
- * Very narrow phones may need natural wrapping rather than overflow.
- * This only activates below 22rem.
+ * Extremely narrow phones:
+ * preserve the four line groups but reduce type slightly
+ * instead of falling back to uncontrolled wrapping.
  */
-@media (max-width: 22rem) {
-  .wf-home-intro__copy-mobile-line {
+@media (max-width: 23rem) {
+  .wf-home-intro__editorial-copy {
     width:
-      auto;
+      92% !important;
 
-    white-space:
-      normal;
+    margin-left:
+      8% !important;
+
+    font-size:
+      clamp(
+        0.84rem,
+        3.55vw,
+        0.96rem
+      ) !important;
   }
 }
 
