@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
+import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import { RouteHeroTitle } from '../components/RouteHeroEffects.js'
 
 const archiveTags = Object.freeze([
@@ -15,13 +15,20 @@ export default function ResearchPage() {
     {
       className: 'wf-research',
     },
-
-    createElement(RouteHeroMagneticScroll, {
-      heroSelector: '.wf-research-hero',
-      nextSelector: '.wf-research-archive',
+    createElement(RouteResearchBookScroll, {
+      rootSelector: '.wf-research',
+      sections: [
+      {
+        selector: '.wf-research-hero',
+        label: 'RESEARCH',
+      },
+      {
+        selector: '.wf-research-archive',
+        label: 'ARCHIVE',
+      },
+      ],
     }),
-
-    createElement(
+createElement(
       'section',
       {
         className: 'wf-research-hero',

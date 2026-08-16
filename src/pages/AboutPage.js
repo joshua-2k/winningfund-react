@@ -1,5 +1,5 @@
 ﻿import { createElement } from 'react'
-import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
+import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import { RouteHeroTitle, RouteHeroWave } from '../components/RouteHeroEffects.js'
 import {
   selectAboutPageData,
@@ -391,13 +391,28 @@ export default function AboutPage() {
     {
       className: 'wf-about',
     },
-
-    createElement(RouteHeroMagneticScroll, {
-      heroSelector: '.wf-about-hero',
-      nextSelector: '.wf-about-section--intro',
+    createElement(RouteResearchBookScroll, {
+      rootSelector: '.wf-about',
+      sections: [
+      {
+        selector: '.wf-about-hero',
+        label: 'ABOUT',
+      },
+      {
+        selector: '.wf-about-section--intro',
+        label: 'INTRO',
+      },
+      {
+        selector: '.wf-about-section--external',
+        label: 'NETWORK',
+      },
+      {
+        selector: '.wf-about-section--social',
+        label: 'SNS',
+      },
+      ],
     }),
-
-    createElement(
+createElement(
       'section',
       {
         className: 'wf-about-hero',

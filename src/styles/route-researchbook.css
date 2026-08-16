@@ -1,0 +1,662 @@
+/* ============================================================
+   WF ROUTE INTERACTIVE RESEARCH BOOK 2026-08
+   ABOUT / MEMBERS / ACTIVITIES / RESEARCH / RECRUITMENT
+   HOME keeps its own tuned controller.
+   ============================================================ */
+
+.wf-route-book-section {
+  scroll-margin-top:
+    clamp(
+      4.5rem,
+      6.5vw,
+      5.75rem
+    );
+}
+
+
+/* ============================================================
+   FIXED READING PROGRESS — desktop / laptop only
+   ============================================================ */
+
+.wf-route-book-progress {
+  position: fixed;
+  z-index: 24;
+  top: 50%;
+  right:
+    clamp(
+      16px,
+      2.1vw,
+      34px
+    );
+
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+
+  padding: 10px 7px;
+
+  color:
+    rgba(
+      224,
+      234,
+      249,
+      0.72
+    );
+
+  background:
+    rgba(
+      5,
+      14,
+      31,
+      0.50
+    );
+
+  border:
+    1px
+    solid
+    rgba(
+      201,
+      222,
+      251,
+      0.12
+    );
+
+  border-radius: 999px;
+
+  backdrop-filter:
+    blur(12px);
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  box-shadow:
+    0
+    12px
+    36px
+    rgba(
+      0,
+      0,
+      0,
+      0.11
+    );
+
+  transform:
+    translateY(-50%);
+}
+
+.wf-route-book-progress__count {
+  font-size: 0.53rem;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-variant-numeric:
+    tabular-nums;
+  white-space: nowrap;
+}
+
+.wf-route-book-progress__rail {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 3px 0;
+}
+
+.wf-route-book-progress__rail::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 7px;
+  bottom: 7px;
+  left: 50%;
+  width: 1px;
+
+  background:
+    rgba(
+      213,
+      228,
+      249,
+      0.18
+    );
+
+  transform:
+    translateX(-50%);
+}
+
+.wf-route-book-progress__dot {
+  position: relative;
+  z-index: 1;
+
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  background:
+    rgba(
+      219,
+      231,
+      248,
+      0.32
+    );
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      5,
+      14,
+      31,
+      0.72
+    );
+
+  transition:
+    width 180ms ease,
+    height 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.wf-route-book-progress__dot:hover,
+.wf-route-book-progress__dot:focus-visible {
+  background:
+    rgba(
+      148,
+      215,
+      255,
+      0.82
+    );
+  outline: none;
+}
+
+.wf-route-book-progress__dot.is-active {
+  width: 8px;
+  height: 8px;
+
+  background: #78d4ff;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      5,
+      14,
+      31,
+      0.76
+    ),
+    0
+    0
+    12px
+    rgba(
+      120,
+      212,
+      255,
+      0.35
+    );
+}
+
+.wf-route-book-progress__label {
+  writing-mode:
+    vertical-rl;
+
+  transform:
+    rotate(180deg);
+
+  color:
+    rgba(
+      219,
+      232,
+      250,
+      0.52
+    );
+
+  font-size: 0.47rem;
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: 0.13em;
+}
+
+
+/* ============================================================
+   SEQUENTIAL REVEAL
+   Page-specific, deliberately restrained.
+   ============================================================ */
+
+@media
+  (prefers-reduced-motion: no-preference) {
+
+  /* ---------------- ABOUT ---------------- */
+
+  .wf-about.wf-route-book-root
+  .wf-about-section
+  .wf-about-section-head,
+
+  .wf-about.wf-route-book-root
+  .wf-about-section--intro
+  .wf-about-org-heading,
+
+  .wf-about.wf-route-book-root
+  .wf-about-section--intro
+  .wf-about-org,
+
+  .wf-about.wf-route-book-root
+  .wf-about-section--external
+  .wf-about-external__item,
+
+  .wf-about.wf-route-book-root
+  .wf-about-section--social
+  .wf-about-social__link,
+
+  /* ---------------- MEMBERS ---------------- */
+
+  .wf-members.wf-route-book-root
+  .wf-members-section--current
+  .wf-members-current__heading,
+
+  .wf-members.wf-route-book-root
+  .wf-members-section--current
+  .wf-member-card,
+
+  .wf-members.wf-route-book-root
+  .wf-members-section--history
+  .wf-members-history__heading,
+
+  .wf-members.wf-route-book-root
+  .wf-members-section--history
+  .wf-accordion,
+
+  /* ---------------- ACTIVITIES ---------------- */
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-intro
+  .wf-activities-intro__index,
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-intro
+  .wf-activities-intro__headline,
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-intro
+  .wf-activities-intro__copy,
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-internal-nav,
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-internal-nav
+    + .wf-activities-tab-stage,
+
+  /* ---------------- RESEARCH ---------------- */
+
+  .wf-research.wf-route-book-root
+  .wf-research-archive
+  .wf-research-archive__header,
+
+  .wf-research.wf-route-book-root
+  .wf-research-archive
+  .wf-research-coming-soon,
+
+  /* ---------------- RECRUITMENT ---------------- */
+
+  .wf-recruitment.wf-route-book-root
+  .wf-recruitment-info
+  .wf-recruitment-info__heading,
+
+  .wf-recruitment.wf-route-book-root
+  .wf-recruitment-info
+  .wf-recruitment-facts,
+
+  .wf-recruitment.wf-route-book-root
+  .wf-recruitment-action
+  .wf-recruitment-action__copy,
+
+  .wf-recruitment.wf-route-book-root
+  .wf-recruitment-action
+  .wf-recruitment-action__actions {
+    opacity: 0;
+
+    transform:
+      translate3d(
+        0,
+        22px,
+        0
+      );
+
+    transition:
+      opacity
+      640ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+      transform
+      640ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+  }
+
+
+  /* ABOUT */
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-section-head {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-org-heading {
+    opacity: 1;
+    transform: none;
+    transition-delay: 155ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-org {
+    opacity: 1;
+    transform: none;
+    transition-delay: 250ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-external__item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-external__item:nth-child(1) {
+    transition-delay: 150ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-external__item:nth-child(2) {
+    transition-delay: 225ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-external__item:nth-child(3) {
+    transition-delay: 300ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-external__item:nth-child(4) {
+    transition-delay: 375ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-social__link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-social__link:nth-child(1) {
+    transition-delay: 160ms;
+  }
+
+  .wf-about.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-about-social__link:nth-child(2) {
+    transition-delay: 250ms;
+  }
+
+
+  /* MEMBERS */
+
+  .wf-members.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-members-current__heading,
+
+  .wf-members.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-members-history__heading {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-members.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-member-card {
+    opacity: 1;
+    transform: none;
+
+    transition-delay:
+      calc(
+        145ms
+        +
+        var(
+          --wf-member-order,
+          0
+        )
+        * 46ms
+      );
+  }
+
+  .wf-members.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-accordion {
+    opacity: 1;
+    transform: none;
+    transition-delay: 175ms;
+  }
+
+
+  /* ACTIVITIES */
+
+  .wf-activities.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-activities-intro__index {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-activities.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-activities-intro__headline {
+    opacity: 1;
+    transform: none;
+    transition-delay: 135ms;
+  }
+
+  .wf-activities.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-activities-intro__copy {
+    opacity: 1;
+    transform: none;
+    transition-delay: 230ms;
+  }
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-internal-nav.wf-route-book-section--seen {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-activities.wf-route-book-root
+  .wf-activities-internal-nav.wf-route-book-section--seen
+    + .wf-activities-tab-stage {
+    opacity: 1;
+    transform: none;
+    transition-delay: 155ms;
+  }
+
+
+  /* RESEARCH */
+
+  .wf-research.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-research-archive__header {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-research.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-research-coming-soon {
+    opacity: 1;
+    transform: none;
+    transition-delay: 180ms;
+  }
+
+
+  /* RECRUITMENT */
+
+  .wf-recruitment.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-recruitment-info__heading,
+
+  .wf-recruitment.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-recruitment-action__copy {
+    opacity: 1;
+    transform: none;
+    transition-delay: 50ms;
+  }
+
+  .wf-recruitment.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-recruitment-facts,
+
+  .wf-recruitment.wf-route-book-root
+  .wf-route-book-section--seen
+  .wf-recruitment-action__actions {
+    opacity: 1;
+    transform: none;
+    transition-delay: 170ms;
+  }
+}
+
+
+/* ============================================================
+   MEMBERS — requested alignment + smaller history heading
+   This file is imported last so it also wins over mobile-polish.
+   ============================================================ */
+
+.wf-members-current__meta {
+  align-items: baseline !important;
+  flex-wrap: nowrap !important;
+}
+
+.wf-members-current__badge {
+  flex: 0 0 auto !important;
+  position: relative;
+  top: -0.14em;
+}
+
+.wf-members-history__heading h2 {
+  font-size:
+    clamp(
+      2.15rem,
+      3.4vw,
+      3.7rem
+    )
+    !important;
+
+  line-height: 1 !important;
+}
+
+@media (max-width: 40rem) {
+  .wf-members-current__meta {
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .wf-members-current__meta strong {
+    font-size:
+      2.05rem
+      !important;
+  }
+
+  .wf-members-current__badge {
+    top: -0.12em;
+    padding:
+      4px
+      8px;
+    font-size:
+      0.55rem
+      !important;
+  }
+
+  .wf-members-history__heading h2 {
+    font-size:
+      clamp(
+        1.9rem,
+        8vw,
+        2.55rem
+      )
+      !important;
+  }
+}
+
+
+/* ============================================================
+   TOUCH / MOBILE
+   Normal scrolling; fixed progress hidden.
+   Reveal remains subtle.
+   ============================================================ */
+
+@media
+  (max-width: 63.99rem),
+  (hover: none),
+  (pointer: coarse) {
+
+  .wf-route-book-progress {
+    display:
+      none
+      !important;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media
+  (prefers-reduced-motion: reduce) {
+
+  .wf-route-book-root
+  .wf-route-book-section * {
+    transition-duration:
+      0.01ms
+      !important;
+
+    animation-duration:
+      0.01ms
+      !important;
+
+    animation-iteration-count:
+      1
+      !important;
+  }
+}

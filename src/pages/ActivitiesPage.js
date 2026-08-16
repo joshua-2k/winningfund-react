@@ -4,7 +4,7 @@
   useState,
 } from 'react'
 import { useLocation } from 'react-router'
-import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
+import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import InternalSectionNav from '../components/InternalSectionNav.js'
 import { RouteHeroTitle, RouteHeroWave } from '../components/RouteHeroEffects.js'
 import ResponsiveMedia from '../components/ResponsiveMedia.js'
@@ -777,15 +777,24 @@ export default function ActivitiesPage() {
     {
       className: 'wf-activities',
     },
-
-    createElement(RouteHeroMagneticScroll, {
-      heroSelector:
-        '.wf-activities-hero',
-      nextSelector:
-        '.wf-activities-intro',
+    createElement(RouteResearchBookScroll, {
+      rootSelector: '.wf-activities',
+      sections: [
+      {
+        selector: '.wf-activities-hero',
+        label: 'ACTIVITIES',
+      },
+      {
+        selector: '.wf-activities-intro',
+        label: 'SYSTEM',
+      },
+      {
+        selector: '.wf-activities-internal-nav',
+        label: 'PROGRAMS',
+      },
+      ],
     }),
-
-    createElement(
+createElement(
       'section',
       {
         className:

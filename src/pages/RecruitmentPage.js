@@ -1,5 +1,5 @@
 ﻿import { createElement } from 'react'
-import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
+import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import CTAButton from '../components/CTAButton.js'
 import { RouteHeroTitle, RouteHeroWave } from '../components/RouteHeroEffects.js'
 import {
@@ -99,13 +99,24 @@ const startToken = formatDateToken(period?.startAt)
     {
       className: 'wf-recruitment',
     },
-
-    createElement(RouteHeroMagneticScroll, {
-      heroSelector: '.wf-recruitment-hero',
-      nextSelector: '.wf-recruitment-info',
+    createElement(RouteResearchBookScroll, {
+      rootSelector: '.wf-recruitment',
+      sections: [
+      {
+        selector: '.wf-recruitment-hero',
+        label: 'RECRUIT',
+      },
+      {
+        selector: '.wf-recruitment-info',
+        label: 'INFO',
+      },
+      {
+        selector: '.wf-recruitment-action',
+        label: 'APPLY',
+      },
+      ],
     }),
-
-    createElement(
+createElement(
       'section',
       {
         className: 'wf-recruitment-hero',

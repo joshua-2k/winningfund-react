@@ -1,5 +1,5 @@
 ﻿import { createElement } from 'react'
-import RouteHeroMagneticScroll from '../components/RouteHeroMagneticScroll.js'
+import RouteResearchBookScroll from '../components/RouteResearchBookScroll.js'
 import { RouteHeroTitle, RouteHeroWave } from '../components/RouteHeroEffects.js'
 import Accordion from '../components/Accordion.js'
 import MemberGrid from '../components/MemberGrid.js'
@@ -112,13 +112,24 @@ export default function MembersPage() {
     {
       className: 'wf-members',
     },
-
-    createElement(RouteHeroMagneticScroll, {
-      heroSelector: '.wf-members-hero',
-      nextSelector: '.wf-members-section--current',
+    createElement(RouteResearchBookScroll, {
+      rootSelector: '.wf-members',
+      sections: [
+      {
+        selector: '.wf-members-hero',
+        label: 'MEMBERS',
+      },
+      {
+        selector: '.wf-members-section--current',
+        label: 'CURRENT',
+      },
+      {
+        selector: '.wf-members-section--history',
+        label: 'HISTORY',
+      },
+      ],
     }),
-
-    createElement(
+createElement(
       'section',
       {
         className: 'wf-members-hero',
