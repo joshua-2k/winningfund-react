@@ -329,3 +329,28 @@
     gap: 12px 18px;
   }
 }
+
+/* WF RESEARCH HEADING SCALE 2026-08 START */
+/* Keep the main RESEARCH hero dominant; reduce content-section headings. */
+.wf-research-archive__header h2 {
+  font-size: clamp(2.7rem, 4.15vw, 4.55rem) !important;
+  line-height: 0.98 !important;
+}
+
+.wf-research-coming-soon__body h3 {
+  font-size: clamp(2.05rem, 3.65vw, 3.85rem) !important;
+  line-height: 1.04 !important;
+}
+
+@media (max-width: 47.99rem) {
+  .wf-research-archive__header h2 {
+    font-size: clamp(2.25rem, 10.4vw, 3.7rem) !important;
+    line-height: 1 !important;
+  }
+
+  .wf-research-coming-soon__body h3 {
+    font-size: clamp(1.95rem, 8.8vw, 3rem) !important;
+    line-height: 1.06 !important;
+  }
+}
+/* WF RESEARCH HEADING SCALE 2026-08 END */
