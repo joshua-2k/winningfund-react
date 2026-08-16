@@ -24,6 +24,8 @@ import './styles/route-photo-backgrounds.css'
 
 import './styles/recruitment-photo-background.css'
 
+import './styles/mobile-polish.css'
+
 const rootElement = document.getElementById('root')
 
 if (!rootElement) {

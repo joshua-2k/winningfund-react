@@ -1,0 +1,428 @@
+/* ============================================================
+   WINNINGFUND MOBILE POLISH 2026-08
+   Mobile-only visual refinements.
+   Desktop remains untouched.
+   ============================================================ */
+
+/* ============================================================
+   1. MOBILE TITLE SCALE
+   Major hero + section headings only.
+   Body copy / labels / nav text are intentionally untouched.
+   ============================================================ */
+@media (max-width: 48rem) {
+  .wf-section-header__title {
+    font-size: clamp(1.9rem, 8.4vw, 2.75rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  /* HOME hero */
+  .wf-home-kinetic-row--1 .wf-home-kinetic-row__ghost,
+  .wf-home-kinetic-row--1 .wf-home-kinetic-row__reveal-word,
+  .wf-home-kinetic-row--2 .wf-home-kinetic-row__ghost,
+  .wf-home-kinetic-row--2 .wf-home-kinetic-row__reveal-word,
+  .wf-home-kinetic-row--3 .wf-home-kinetic-row__ghost,
+  .wf-home-kinetic-row--3 .wf-home-kinetic-row__reveal-word {
+    font-size: clamp(1.95rem, 8.4vw, 2.85rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  .wf-home-intro__headline {
+    font-size: clamp(2rem, 8.8vw, 2.95rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .wf-home-programs__headline {
+    font-size: clamp(1.95rem, 8.6vw, 2.9rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .wf-home-program__title {
+    font-size: clamp(1.12rem, 4.8vw, 1.55rem) !important;
+  }
+
+  .wf-home-mission__eyebrow {
+    font-size: clamp(2.2rem, 9.8vw, 3.4rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .wf-home-mission__heading {
+    font-size: clamp(1.45rem, 6.2vw, 2.05rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .wf-home-semester__title {
+    font-size: clamp(2.45rem, 10.5vw, 3.4rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  /* ABOUT */
+  .wf-about-hero__title {
+    font-size: clamp(3.25rem, 15.5vw, 4.8rem) !important;
+    line-height: 0.86 !important;
+  }
+
+  .wf-about-section-head__title {
+    font-size: clamp(2.2rem, 9.7vw, 3.25rem) !important;
+    line-height: 1 !important;
+  }
+
+  .wf-about-section--external
+    .wf-about-section-head__title {
+    font-size: clamp(2rem, 8.8vw, 3rem) !important;
+  }
+
+  /* MEMBERS */
+  .wf-members-hero__title {
+    font-size: clamp(3.25rem, 15.5vw, 4.7rem) !important;
+    line-height: 0.88 !important;
+  }
+
+  .wf-members-current__meta strong {
+    font-size: 1.9rem !important;
+  }
+
+  .wf-members-current__heading h2,
+  .wf-members-history__heading h2 {
+    font-size: clamp(2.15rem, 9.5vw, 3.15rem) !important;
+    line-height: 1 !important;
+  }
+
+  /* ACTIVITIES */
+  .wf-activities-hero__title {
+    font-size: clamp(3.15rem, 14.8vw, 4.65rem) !important;
+    line-height: 0.88 !important;
+  }
+
+  .wf-activities-intro__headline {
+    font-size: clamp(2rem, 8.6vw, 2.9rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  .wf-activities-program__heading h2,
+  .wf-activities-chapter__heading h2 {
+    font-size: clamp(2.15rem, 9.5vw, 3.2rem) !important;
+    line-height: 1 !important;
+  }
+
+  .wf-activities-clubs__heading h2 {
+    font-size: clamp(2.3rem, 10vw, 3.4rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  /* RESEARCH */
+  .wf-research-hero__title {
+    font-size: clamp(3.25rem, 15.5vw, 4.8rem) !important;
+    line-height: 0.88 !important;
+  }
+
+  .wf-research-archive__header h2 {
+    font-size: clamp(2rem, 9vw, 3.1rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .wf-research-coming-soon__body h3 {
+    font-size: clamp(1.8rem, 8vw, 2.65rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  /* RECRUITMENT */
+  .wf-recruitment-hero__title {
+    font-size: clamp(3.05rem, 12.7vw, 4.6rem) !important;
+    line-height: 0.86 !important;
+  }
+
+  .wf-recruitment-hero__period {
+    font-size: clamp(1.7rem, 7.6vw, 2.55rem) !important;
+  }
+
+  .wf-recruitment-info__heading h2 {
+    font-size: clamp(2.15rem, 9.4vw, 3.15rem) !important;
+    line-height: 1 !important;
+  }
+
+  .wf-recruitment-action__copy h2 {
+    font-size: clamp(3rem, 12.8vw, 4.5rem) !important;
+    line-height: 0.86 !important;
+  }
+}
+
+
+/* ============================================================
+   2. HOME 18-2 SCHEDULE
+   Preserve the same visual language as desktop:
+   - month number + month label
+   - cyan left rule
+   - pale bordered event field
+   - individual event separators
+
+   On a phone, the four desktop columns become a horizontal
+   swipe rail so the cards keep their desktop proportions.
+   ============================================================ */
+@media (max-width: 48rem) {
+  .wf-home-semester {
+    position: relative;
+    overflow: hidden !important;
+    background: #f7faff !important;
+  }
+
+  .wf-home-semester::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        circle at 88% 6%,
+        rgba(92, 200, 255, 0.11) 0%,
+        transparent 26%
+      );
+  }
+
+  .wf-home-semester.wf-section--spacing-compact {
+    padding-block: 62px 88px !important;
+  }
+
+  .wf-home-semester__editorial {
+    position: relative;
+    z-index: 1;
+    width: min(
+      calc(100% - var(--wf-gutter) * 2),
+      1180px
+    ) !important;
+    margin: 0 auto !important;
+  }
+
+  .wf-home-semester__heading-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    align-items: end !important;
+  }
+
+  .wf-home-semester__heading-copy {
+    display: grid;
+    gap: 11px;
+  }
+
+  .wf-home-semester__eyebrow {
+    margin: 0 !important;
+    color: var(--wf-brand-blue) !important;
+    font-size: 0.66rem !important;
+    font-weight: 860 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .wf-home-semester__months {
+    list-style: none;
+    width:
+      calc(
+        100%
+        + var(--wf-gutter)
+        * 2
+      );
+    margin:
+      38px
+      calc(var(--wf-gutter) * -1)
+      0 !important;
+    padding:
+      0
+      var(--wf-gutter)
+      12px !important;
+
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(230px, 78vw);
+    grid-template-columns: none !important;
+    gap: 16px !important;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--wf-gutter);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wf-home-semester__months::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wf-home-semester__month {
+    list-style: none;
+    min-width: 0;
+    display: grid !important;
+    grid-template-rows: auto 1fr;
+    gap: 13px !important;
+    scroll-snap-align: start;
+  }
+
+  .wf-home-semester__month-heading {
+    min-height: 55px;
+    display: grid !important;
+    align-content: end;
+    gap: 5px;
+    padding: 0 2px 11px !important;
+    border-bottom:
+      1px
+      solid
+      rgba(23, 51, 91, 0.16) !important;
+  }
+
+  .wf-home-semester__month-number {
+    color: #0a1730 !important;
+    font-size: 2.2rem !important;
+    font-weight: 830 !important;
+    line-height: 0.84 !important;
+    letter-spacing: -0.055em !important;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wf-home-semester__month-label {
+    color: #28a9ef !important;
+    font-size: 0.59rem !important;
+    font-weight: 850 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .wf-home-semester__events {
+    list-style: none;
+    min-height: 292px;
+    margin: 0 !important;
+    padding: 8px 17px 16px !important;
+    display: grid !important;
+    align-content: start;
+
+    border-top:
+      1px
+      solid
+      rgba(255, 255, 255, 0.76) !important;
+    border-left:
+      2px
+      solid
+      #59c9f8 !important;
+    border-right:
+      1px
+      solid
+      rgba(28, 59, 104, 0.12) !important;
+    border-bottom:
+      1px
+      solid
+      rgba(28, 59, 104, 0.12) !important;
+    border-radius: 0 10px 10px 0 !important;
+
+    background:
+      rgba(255, 255, 255, 0.52) !important;
+    box-shadow:
+      0
+      14px
+      34px
+      rgba(43, 78, 129, 0.045) !important;
+  }
+
+  .wf-home-semester__event {
+    list-style: none;
+    min-width: 0;
+    display: grid !important;
+    gap: 5px !important;
+    padding: 14px 0 !important;
+    border-bottom:
+      1px
+      solid
+      rgba(41, 70, 112, 0.11) !important;
+  }
+
+  .wf-home-semester__event:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .wf-home-semester__event-date {
+    color: var(--wf-brand-blue) !important;
+    font-size: 0.66rem !important;
+    font-weight: 830 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .wf-home-semester__event-title {
+    color: #14233d !important;
+    font-size: 0.88rem !important;
+    font-weight: 680 !important;
+    line-height: 1.42 !important;
+    letter-spacing: -0.025em !important;
+    word-break: keep-all;
+  }
+}
+
+
+/* ============================================================
+   3. MOBILE ROUTE CURTAIN
+   Smaller logo + deeper navy field.
+   Applies to touch/coarse devices too, matching the existing
+   transition activation condition.
+   ============================================================ */
+@media (max-width: 48rem), (hover: none), (pointer: coarse) {
+  .wf-mobile-route-curtain {
+    background:
+      radial-gradient(
+        circle at 22% 16%,
+        rgba(55, 127, 201, 0.16),
+        transparent 34%
+      ),
+      radial-gradient(
+        circle at 80% 84%,
+        rgba(28, 76, 150, 0.18),
+        transparent 38%
+      ),
+      linear-gradient(
+        155deg,
+        #050b18 0%,
+        #071329 38%,
+        #0a1b38 70%,
+        #0b2850 100%
+      ) !important;
+  }
+
+  .wf-mobile-route-curtain::before {
+    opacity: 0.15 !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.045),
+        transparent 30%,
+        transparent 68%,
+        rgba(0, 7, 24, 0.20)
+      ) !important;
+  }
+
+  .wf-mobile-route-curtain__brand-stage {
+    width: min(42vw, 160px) !important;
+  }
+
+  .wf-mobile-route-curtain__logo {
+    width: min(24vw, 92px) !important;
+    filter:
+      brightness(0)
+      invert(1)
+      drop-shadow(
+        0
+        5px
+        16px
+        rgba(0, 0, 0, 0.20)
+      ) !important;
+  }
+
+  .wf-mobile-route-curtain__dot {
+    background: rgba(214, 236, 255, 0.68) !important;
+    box-shadow:
+      0
+      0
+      8px
+      rgba(104, 177, 255, 0.12) !important;
+  }
+}
