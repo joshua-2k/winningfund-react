@@ -775,3 +775,84 @@
 }
 
 /* WF MOBILE MENU SCALE 2026-08 END */
+
+/* ============================================================
+   WF MOBILE MENU SCALE 2026-08 START
+   v2: one more small reduction from v1.
+   ============================================================ */
+
+@media (max-width: 59.99rem) {
+  .wf-mobile-nav__list {
+    gap:
+      clamp(
+        5px,
+        0.95vh,
+        11px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__link {
+    min-height:
+      clamp(
+        50px,
+        8.1vh,
+        72px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__label {
+    font-size:
+      clamp(
+        1.72rem,
+        8.45vw,
+        3.35rem
+      )
+      !important;
+
+    line-height:
+      0.96
+      !important;
+  }
+}
+
+@media (max-width: 30rem) {
+  .wf-mobile-nav__panel {
+    padding-top:
+      clamp(
+        28px,
+        4.8vh,
+        42px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__list {
+    gap:
+      4px
+      !important;
+  }
+
+  .wf-mobile-nav__link {
+    min-height:
+      clamp(
+        47px,
+        7.5vh,
+        60px
+      )
+      !important;
+  }
+
+  .wf-mobile-nav__label {
+    font-size:
+      clamp(
+        1.56rem,
+        8.05vw,
+        2.52rem
+      )
+      !important;
+  }
+}
+
+/* WF MOBILE MENU SCALE 2026-08 END */
