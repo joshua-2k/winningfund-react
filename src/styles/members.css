@@ -480,3 +480,28 @@
   letter-spacing: 0 !important;
 }
 /* WF MEMBERS TERM HYPHEN SPACING 2026-08 END */
+
+/* ============================================================
+   WF MEMBERS TERM LABEL BLUE 2026-08 START
+   Current + historical generation labels only.
+   ============================================================ */
+
+.wf-members .wf-members-term-label {
+  color:
+    var(
+      --wf-brand-blue
+    )
+    !important;
+}
+
+.wf-members
+.wf-members-term-label__number,
+
+.wf-members
+.wf-members-term-label__hyphen {
+  color:
+    inherit
+    !important;
+}
+
+/* WF MEMBERS TERM LABEL BLUE 2026-08 END */
