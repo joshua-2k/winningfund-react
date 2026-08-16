@@ -735,6 +735,43 @@ export default function ActivitiesPage() {
     )
   }
 
+
+  /* WF HOME-TO-ACTIVITIES DEEP SCROLL 2026-08 */
+  useEffect(() => {
+    const hashSectionId =
+      decodeURIComponent(
+        location.hash.replace(/^#/, ''),
+      )
+
+    if (
+      !hashSectionId ||
+      hashSectionId !== activeSectionId ||
+      !navItems.some(
+        (item) =>
+          item.id === hashSectionId,
+      )
+    ) {
+      return undefined
+    }
+
+    const frameId =
+      requestAnimationFrame(() => {
+        const target =
+          document.getElementById(
+            hashSectionId,
+          )
+
+        target?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      })
+
+    return () => {
+      cancelAnimationFrame(frameId)
+    }
+  }, [activeSectionId, location.hash])
+
   return createElement(
     'main',
     {
